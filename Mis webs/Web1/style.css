@@ -270,43 +270,57 @@ img {
 }
 
 .section-article-info {
-    display: inline;
-    width: 100%;
-    border-radius: inherit;
-    padding: 0 2vw;
-    font-size: 1.4vw;
-    margin-top: 1rem;
-}
-
-.section-article-info > a {
-    color: dodgerblue;
-    font-size: 1.5rem;
-    text-decoration: underline;
-}
-
-.div-section-article-info {
     background-color: transparent;
-    position: relative;
-    align-content: flex-end;
-    height: 10vh;
+    width: 100%;
+    display: flex; /* Así queda que 'flex-direction: row', así queda bien*/
+    justify-content: left;
 }
 
-.div-section-article-info > * {
-    position: absolute;
-    bottom: 0;
+.div-section-article-info-left {
+    /* background-color: hotpink; */
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.div-section-article-info > a {
+.div-section-article-info-left > a {
+    font-size: 3rem;
+    background-image: linear-gradient(90deg, dodgerblue, violet);
+    /* background-image: linear-gradient(90deg, blue, red); */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.p-section-article-info {
+    /* background-color: red; */
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vh;
+    color: gray;
+}
+
+.div-section-article-info-right {
+    /* background-color: purple; */
+    width: auto;
+    margin: auto;
+    margin-left: 2rem;
+}
+
+.div-section-article-info-right > a {
     color: orange;
     text-decoration: underline;
-    font-size: 1.2rem;
-    bottom: 1.5rem;
+    display: flex;
+    font-size: 1.3rem;
 }
 
-.div-section-article-info > p {
+.div-section-article-info-right > p {
     color: white;
-    font-size: 1rem;
 }
+
+
 
 
 /*
