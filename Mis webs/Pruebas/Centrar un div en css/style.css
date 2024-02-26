@@ -1,0 +1,80 @@
+/* Partimos de esto: */
+* {
+    background-color: black;
+    color: white;
+}
+
+div {
+    border: 1px solid #09f;
+    width: 150px;
+    height: 150px;
+    padding: 8px;
+}
+
+main {
+    min-height: 100vh;
+} 
+
+
+/* ============================================================================================================================ */
+/* ============================================================================================================================ */
+
+/*
+        - Primera forma -
+
+main {
+    display: flex;  /* Añadimos esta propiedad * /
+}
+
+main > * {
+    margin: auto;    /* Y establecemos la propiedad 'margin' en auto para todo elemento directamente hijo del 'main' * /
+} */
+
+
+/* ============================================================================================================================ */
+/* ============================================================================================================================ */
+
+/* 
+        - Segunda forma - 
+
+main {
+    display: grid;          /* Agregamos esta propiedad * /
+    place-content: center;  /* Y agregamos esta otra también * /
+} */
+
+
+/* ============================================================================================================================ */
+/* ============================================================================================================================ */
+
+/* 
+        - Tercera forma -
+
+main {
+    position: relative; /* Le sumamos la propiedad 'position' con valor en 'relative' al 'main' * /
+}
+
+div {
+    /* Y agregamos las siguientes propiedades al 'div' * /
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+
+/* ============================================================================================================================ */
+/* ============================================================================================================================ */
+
+/*
+        - Cuarta y mEJOR solución / forma -
+
+        Es la mejor solución por tener menos problemas que las demás
+*/
+
+main {
+    /* Le ponemos estas propiedades al 'main' y ya */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
