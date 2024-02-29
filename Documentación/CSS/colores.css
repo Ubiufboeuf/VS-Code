@@ -1,0 +1,119 @@
+/*
+
+    - Colores -
+
+    1. Por palabra clave: red, blue, gray, black, etc.
+    
+    ----------------------------------------------------------------------------------------------------
+    
+    2. Hexadecimal: #xxyyzz -> donde 'x' son los valores del color rojo, 'y' del verde, y 'z' del azul.
+        Pueden haber 1 dígito por color o 2, esto según la especificidad que se busque para el color.
+        Los valores de los colores pueden ir en mayúscula o minúscula, no cambia nada usar uno u otro.
+        El rango de números que alcanza el Hexadecimal va desde '0' hasta 'F' de la siguiente forma:
+
+            - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F -
+
+        Se pueden usar 3 - 4 - 6 - 8 dígitos para representar un color hexadecimal:
+
+            3 -> # 'red' 'green' 'blue'
+            4 -> # 'red' 'green' 'blue' 'alfa'
+            6 -> # 'red' 'red' 'green' 'green' 'blue' 'blue'
+            8 -> # 'red' 'red' 'green' 'green' 'blue' 'blue' 'alfa' 'alfa'
+
+            Ejemplo: #09f es lo mismo que #0099ff
+    
+    ----------------------------------------------------------------------------------------------------
+    
+    3. Alfa-Hexadecimal: #xxyyzzaa -> es lo mismo que Hexadecimal pero agregando el valor 'a' al final.
+        El valor a, al igual que los demás del "hex", puede tener 1 o 2 dígitos.
+        El valor 'a' indica la transparencia del color.
+
+    ----------------------------------------------------------------------------------------------------
+    
+    4. RGB: rgb( 'red', 'green', 'blue' ):
+        El código de color 'rgb' es, en lo personal, una de las formas más cómodas para establecer colores
+        complejos.
+        El rango de valores de cada color que se puede establecer va desde '0' hasta '255', siendo el valor
+        '0' el de menor luminosidad y '255' el de mayor luminosidad.
+        Y algo opcional pero cómodo para implementar un color 'rgb' es el hecho de que puedes omitir las comas.
+    -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+    4-1. RGB: rgb( 'red' 'green' 'blue' / 'alfa' ):
+        En el código de colores 'rgb' puedes establecer el valor 'alfa' añadiendo una barra '/' después
+        de los colores 'r' 'g' 'b'.
+        El rango de valores del alfa en el rgb() va desde el '0%' hasta el '100%'.
+        No puedes incluir comas ',' dentro de la propiedad rgb() para poder añadir el valor alfa '/'.
+        Debes incluir un símbolo de porcentaje '%' después del valor alfa para que este funcione correctamente.
+        
+    ----------------------------------------------------------------------------------------------------
+    
+    5. RGBA: rgba( 'red', 'green', 'blue', 'alfa' ):
+        Al igual que el rgb() este puede o no contener las comas ',' entre los valores de los colores.
+        A diferencia del rgb(), el valor alfa no se divide con una barra '/' y su rango de valores
+        no va desde el '0%' al '100%', sino desde el '0' hasta el '1' pasando por decimales.
+
+    ----------------------------------------------------------------------------------------------------
+
+    6. HSL: hsl( 'hue', 'saturation', 'lightness ' ) o ( 'tono', 'saturación', 'luminosidad' ):
+
+
+            - Pagina web de la imagen que además explica bien el HSL: https://www.uifrommars.com/que-es-hsl/ -
+
+
+        Hue - Tono - Matiz:
+            El tono es el valor que establece el color del espectro, se lo puede representar como una rueda
+            ya que su rango de valores va desde '0 grados' hasta '359 grados', una vez que excedes el rango
+            de valores es simplemente como dar una vuelta o varias hacia un sentido de la rueda u otro.
+
+                Imagen de la rueda de color HSL: https://www.uifrommars.com/wp-content/uploads/2020/10/representacion-rueda-color-angulos-1024x439.jpg
+
+        Saturation - Saturación:
+            La saturación indica la intensidad del tono.
+            El rango de valores van desde el '0%' hasta el '100%', aunque se puede omitir el símbolo de porcentaje
+            en el hsl().
+            El valor '0' de saturación indica que el color va a ser lo más saturado que se pueda, mientras
+            que el valor '100' indica que será lo menos saturado que pueda estar el tono, dando como resultado
+            un gris.
+
+        Lightness - Luminosidad - Brightness:
+            El tercer parámetro de HSL es la luminosidad, que hace referencia a cómo de claro u oscuro es un color.
+            Al igual que la saturación, el rango de valores va desde el '0%' hasta el '100%'.
+            Para establecer un color más blanco puedes aumentar el valor de luminosidad, o si quieres un color
+            más oscuro puedes disminuir ese valor.
+
+    ----------------------------------------------------------------------------------------------------
+
+    6. Esto no es en sí una forma de usar colores en CSS, solo aclaro que por ahora 28-02-24 no voy a documentar
+        más formas de colores para CSS como el OKLCH, el HSW, el OKLAB, y demás formas, no me quiero quemar
+        tanto la cabeza para eso.
+
+    ----------------------------------------------------------------------------------------------------
+
+    - Aclaración -
+
+    Entre el rgba() y el rgb(), ya sea para utilizar o no la transparencia, es más recomendable usar el rgb()
+    por temas de compatibilidad y porque el rgba() se ha quedado "obsoleto" aunque se puede seguir usando.
+    
+    
+    - Aclaración -
+    
+    Hay diferentes escalas de colores entre algunos tipos de colores y otros.
+
+
+    - Aclaración -
+    
+    El OKLCH es la forma de representar más colores en CSS, así que se puede decir que es la mejor de todas actualmente (28-02-24),
+    
+        "OKLCH can be used for wide-gamut P3 colors" - https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+         
+    Ni idea que significa pero que está cheto.
+*/
+
+
+selector {
+    /* propiedad: valor; */
+    color: #aaa;
+    color: rgb(10 10 10 / 30%);
+    color: rgba(19 19 19 0.6);
+    color: hsl(360 10 20);
+    color: oklch(lightness chroma hue);
+}
