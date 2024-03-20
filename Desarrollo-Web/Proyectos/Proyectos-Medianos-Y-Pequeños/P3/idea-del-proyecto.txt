@@ -1,0 +1,1 @@
+Como intenté hacer un proyecto (P2) que fuese de música y videos que no llegué a terminar por la forma en la que lo comencé (un poco de html y sigo con css, luego html y luego css), voy a intentar hacer gran (o media, maso) parte del html y lueo veo para hacer el css, así voy viendo en el momento cómo estructuro la página web.

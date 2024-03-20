@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'NS-UI-Font';
+    src: url(../../Assets/Fonts/Nintendo_Switch_UI_Font.ttf);
+}
+
+@font-face {
+    font-family: 'SFProDisplay-Semibold';
+    src: url(../../Assets/Fonts/FontsFree-Net-SFProDisplay-Semibold.ttf);
+}
+
+* {
+    font-family: 'NS-UI-Font', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2d2d2d;
+    background-image: url(../../Assets/Imgs/UI\ B\ 2.png);
+    background-size: 1280px 720px;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4e4e4e;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+.d50x50 {
+    height: 45px;
+}
+
+.icon {
+    height: 34px;
+}
+
+.icon img,
+.d50x50 img {
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    /* background-color: inherit; */
+    display: flex;
+    height: 80px;
+    gap: 270px;
+    justify-content: left;
+    align-items: center;
+    padding-left: 48px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+/* Comienzo - Menú a */
+.menu.a {
+    /* background-color: #f003; */
+    width: 400px;
+    justify-content: left;
+}
+
+.menu.seccion {
+    margin-left: 6.7px;
+    margin-top: 3.0px;
+}
+
+#menu-news,
+#menu-nso,
+#menu-album,
+#menu-controllers {
+    margin-left: 13px;
+}
+
+#menu-controllers {
+    margin-left: 13.3px;
+    margin-bottom: .2px;
+}
+
+#menu-eShop {
+    margin-left: 13.3px;
+}
+
+#icon-seccion-nso,
+#icon-seccion-news,
+#icon-seccion-controllers {
+    height: 27.2px;
+}
+
+#icon-seccion-eShop,
+#icon-seccion-controllers {
+    height: 28px;
+}
+
+#button-control-r {
+    margin-left: 14px;
+}
+
+/* Fin - Menú a */
+/* ----------------------------------------------------------------------------------------------------- */
+/* Comienzo - Menú b */
+.menu.b {
+    /* background-color: #ff03; */
+    width: 600px;
+    justify-content: left;
+    margin-right: 60px;
+}
+
+.menu.b>.button {
+    margin-left: 10px;
+}
+
+#button-control-plus {
+    margin-left: 23px;
+}
+
+#button-plus {
+    height: 37px;
+}
+
+#linea-vertical {
+    background-color: #eee;
+    height: 40px;
+    width: 2px;
+    margin-left: 13px;
+}
+
+#button-profile {
+    margin-left: 6px;
+}
+
+#icon-seccion-profile {
+    margin-left: -1px;
+}
+
+#icon-seccion-sleep {
+    margin-left: -2px;
+}
+
+.li-time {
+    margin-left: 12px;
+}
+
+#hora-actual {
+    display: flex;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    /* background-color: red; */
+    width: 130px;
+    justify-content: center;
+}
+
+.li-wifi {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#icon-seccion-wifi {
+    height: 30px;
+}
+
+.li-batery {
+    display: flex;
+    margin-left: 13px;
+}
+
+#batery {
+    font-size: 21px;
+    color: white;
+    cursor: default;
+}
+
+#icon-batery {
+    height: 30px;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+
+.linea-horizontal-arriba {
+    background-color: #eee;
+    height: 2px;
+    width: 1227px;
+    margin-left: 26.5px;
+    margin-top: -0.8px;
+}
+
+/* Fin - Menú b */
+/* ----------------------------------------------------------------------------------------------------- */
+/* Comienzo - Main */
+main {
+    /* background-color: #f003; */
+    width: 100%;
+    height: 558px;
+    display: flex;
+    justify-content: right;
+}
+
+#section-logo-banner {
+    /* background: #fff3; */
+    display: flex;
+    width: 773px;
+    height: 280px;
+    margin-right: 85px;
+}
+
+#title {
+    /* background-color: #f003; */
+    height: 280px;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title>img {
+    /* background-color: #00f3; */
+    height: 170px;
+    aspect-ratio: 16/9;
+    margin-top: 18px;
+    margin-right: 18px;
+}
+
+#banner {
+    /* background-color: #0f03; */
+    display: flex;
+    height: 214px;
+    width: 374px;
+    aspect-ratio: 16/9;
+    margin-left: 27px;
+    margin-top: 43px;
+    align-items: center;
+}
+
+#vid-banner {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+
+
+
+.linea-horizontal-abajo {
+    background-color: #eee;
+    height: 2px;
+    width: 1227px;
+    margin-left: 26.5px;
+}
