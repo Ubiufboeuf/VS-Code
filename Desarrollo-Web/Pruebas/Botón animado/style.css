@@ -1,0 +1,239 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #161616;
+    margin: 0;
+}
+
+p {
+    margin: 60px;
+    font-family: 'Poppins';
+    font-size: 20px;
+    color: white;
+}
+
+a {
+    color: #07f;
+    text-decoration: none;
+}
+
+/* - A partir de aquí terminan los estilos globales - */
+/* - ============================================== - */
+
+
+input {
+    background-color: red;
+}
+
+/* - Elemento 6 */
+
+#label-for-café {
+    color: white;
+    margin-inline: 20px;
+}
+
+#select-café {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#select-café:hover {
+    background-color: rgb(0 0 0 / 0.4);
+}
+
+#select-cafe option {
+    background-color: inherit;
+}
+
+/* - Elemento Nº5 */
+
+#img-ar {
+    width: 600px;
+    aspect-ratio: 16/9;
+    margin: 30px;
+    margin-top: 0;
+}
+
+/* - Elemento Nº4 - */
+
+#btn-span-animated {
+    background: transparent;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 30px 120px;
+    margin-top: 0;
+    padding: 20px 30px;
+    transition: background .3s linear;
+}
+
+#btn-span-animated:hover {
+    background-color: rgb(80 80 80 / .2);
+}
+
+#span-animated {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    width: max-content;
+}
+
+#span-animated::before {
+    content: "Color animado";
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, red, blue, red);
+    background-clip: text;
+    background-size: 800%;
+    animation: rotación-de-color 20s linear infinite;
+}
+
+@keyframes rotación-de-color {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* - Elemento Nº3 - */
+
+#btn-con-efecto {
+    display: grid;
+    place-items: center;
+    margin: 60px;
+    background: linear-gradient(45deg, #09f, brown);
+    padding: 12px;
+    border-radius: 20px;
+    transition: transform .3s ease;
+    border: none;
+}
+
+#btn-con-efecto span {
+    color: white;
+    font-size: 28px;
+    border-radius: inherit;
+    background-color: #222;
+    padding: 16px 20px;
+    transition: background .3s ease;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#btn-con-efecto:hover {
+    transform: scale(1.1);
+}
+
+#btn-con-efecto span:hover {
+    background-color: transparent;
+}
+
+@keyframes fondo-animado {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* - Elemento Nº2 */
+
+#contenedor-de-carga {
+    /* background-color: white; */
+    height: 240px;
+    width: 550px;
+    display: grid;
+    place-items: center;
+    padding-top: 60px;
+    margin-bottom: -30px;
+}
+
+#carga {
+    border: 16px solid rgb(0 0 0 / 0.4);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: carga 1s linear infinite;
+}
+
+@keyframes carga {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* - Primer elemento creado - */
+
+#anim-btn {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 32px;
+    padding: 24px 32px;
+    margin: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+#anim-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg,
+            red, blue, deeppink, blue,
+            red, blue, deeppink, blue, red);
+    background-size: 800%;
+    filter: blur(8px);
+    border-radius: inherit;
+    animation: animacion 20s linear infinite;
+}
+
+@keyframes animacion {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
