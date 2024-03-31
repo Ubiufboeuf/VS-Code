@@ -1,0 +1,23 @@
+{
+    "games": [
+        {
+            "identifier": "identificador",
+            "idGameTDB": "",
+            "name": "",
+            "fullName": "",
+            "regions": "",
+            "thisRegion": "",
+            "console": "Switch",
+            "ESRB": "",
+            "PEGI": "",
+            "release": {
+                "cover": "",
+                "poster": "",
+                "banner": "",
+                "logo": "",
+                "localVideo": "",
+                "ytVideo": ""
+            }
+        }
+    ]
+}

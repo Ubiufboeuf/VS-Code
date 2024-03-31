@@ -1,6 +1,0 @@
-Te aviso por si vuelves en un futuro y te falta contexto.
-
-Primero seguí el "curso" de HTML de HolaMundo en YouTube para aprender sobre HTML,
-y luego seguí con el de CSS, el tema es que a partir del tiempo 1:49:50 del curso
-de CSS se aprovecha el Blog del curso de HTML, por eso desde este punto voy a seguir
-"estilizando" el blog de HTML con CSS 👍

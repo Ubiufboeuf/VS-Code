@@ -1,0 +1,264 @@
+/*
+    Hay 3 formas para aplicar estilos a elementos html:
+        
+        1. "Llamar" a la etiqueta necesitada
+            - body { background-color: red; }
+        
+        ________________________________________
+
+        2. Usar las id de los elementos html
+            - #título { background-color: red; }
+
+        ________________________________________
+
+        3. Usar las clases de los elementos html
+            - .texto { background-color: red; }
+
+        ________________________________________
+
+        4. Creo que sirve para estilizar estados de un elemento
+            - a:[estado] { background-color: red; }
+
+    Básicamente: (los espacios son para ver mejor las indicaciones)
+
+          etiquetas
+        # id's
+        . clases
+
+*/
+
+
+
+* { /*
+        El '*' se llama selector universal, y sirve para seleccionar a todos los elementos de nuestro documento html,
+        PERO sólo aplicará las propiedades que NO hayan sido establecidas en otros elementos.
+    */
+    font-size: 24px;
+    /* color: black; */
+}
+
+#título {
+    color: cornflowerblue;
+}
+
+p.texto { /* 'Etiqueta'.'id' indica que se aplicará a toda etiqueta 'x' que contenga una id 'y' */
+    color: slateblue;
+}
+
+p.especial {
+    color: red;
+}
+
+div p { /* 'Etiqueta' 'etiqueta' indica que se aplicará a toda etiqueta 'x' que contenga una etiqueta 'y' */
+    color: darkgreen;
+    background: orange;
+}
+
+div h2, div h3 { /* La coma sirve para que un mismo estilo se aplique a varios elementos*/
+    background-color: brown;
+    color: aqua;
+}
+
+.color {
+    /*
+        color: #161616;
+        color: rgb(22, 22, 22);
+    */
+
+    /* border: 5px red; */
+
+    /*
+        Estilos de borde / border-style:
+
+            2D
+                dotted
+                dashed
+                solid
+                double
+                
+            3D
+                groove
+                ridge
+                inset
+                outset
+            
+            none
+            hidden
+    */  
+    
+    border-style: solid;
+    border-color: blue;
+    border-radius: 5px;
+    border-width: 2rem;
+}
+
+#fondo {
+    /* opacity: 0.3; */
+    /* background-image: url('Assets/img/pixel-jeff-clipc-s.png');
+    background-repeat: repeat-x;
+    background-position: left center; */
+
+    background-color: rgba(255, 0, 0); /* El alpha va del 0 al 1, no al 255*/
+    height: 200px;
+    background: #f00 url('Assets/img/pixel-jeff-clipc-s.png') repeat-x left center / 600px 300px;
+
+    /*background-size: 600px 300px; /*Si usamos la propiedad 'background' y esta (-size), hay que poner esta debajo de 'background' para que la tome en cuenta*/
+}
+
+.margen { /* El Box Model de un elemento se puede ver mejor inspeccionando un elemento desde un navegador */
+    background-color: chocolate;
+    margin: 15px;
+    padding: 30px 15px 5px;
+    border: solid 1px black; /* El border está entre el margin y el padding del elemento */
+    height: 100px;
+    width: 50px;
+    overflow: scroll;
+    outline: 1px solid red;
+}
+
+.text {
+    text-align: justify;
+    text-decoration: overline;
+    text-shadow: 3px 5px 4px red;
+    font-family: 'Micro 5', sans-serif;
+    font-size: 40px;
+}
+
+
+/* Estos estados deben tener un orden para que funcionen bien, es el siguiente: */
+a:link {
+    color: orange;
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover {
+    color: yellowgreen;
+}
+
+a:active { /* Es el evento "press" */
+    color: red;
+}
+
+/* (Ejemplo) Si quiero usar solo 'active' ta bien, pero si quiero usar active y 'visited' debo poner primero 'visited' y luego 'active' */
+
+ul {
+    background-color: cyan;
+    list-style-type: circle;
+    padding-left: 40px;
+    /* list-style-position: inside; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px #eee;
+    padding: 5px;
+}
+
+th {
+    background-color: crimson;
+    color: beige;
+    text-align: left;
+    cursor: default;
+}
+
+tr:nth-child(even){ /* even es para impares */
+    background-color: #eee;
+}
+
+tr:nth-child(odd){ /* odd es para pares */
+    background-color: white;
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+span {
+    /* display: none; */
+    /* visibility: hidden; */
+    display: block;
+    background-color: red;
+    max-width: 300px;
+}
+
+.inline {
+    display: inline;
+}
+
+#position {
+    position: sticky;
+    left: 20px;
+    top: 25px;
+}
+
+.left {
+    float: left;
+    width: 300px;
+}
+
+.right {
+    float: right;
+    
+}
+
+.container {
+    height: 200px;
+}
+
+.column {
+    margin: 0;
+    padding: 10px 0;
+    width: 33.3%;
+}
+
+.inline-block {
+    display: inline-block;
+    height: 55px;
+    background-color: red;
+}
+
+.center {
+    padding: 50px 0;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+
+
+
+
+
+/*
+    Sobre el 'margin' y el 'padding':
+        [x] => se aplicará a todos los lados
+        [x, y] => se aplicará verticalmente (x) y horizontalmente (y)
+        [x, y, z] => se aplicará 'x' como el valor superior, 'y' como el valor horizontal, y 'z' como el valor inferior
+        [x, y, z, a] => se aplicará en este orden: [arriba] [derecha] [abajo] [izquierda]
+*/
+
+/*
+    ===============================
+    |IMPORTANTE SOBRE EL BOX MODEL|
+    ===============================
+
+    Para calcular el alto o ancho total de un elemento hay que tener en cuenta esto:
+
+        Ancho total = margen + border + padding + ancho
+        Alto total  = margen + border + padding + alto
+*/
+
+
+/*
+    La prioridad de estilos se ordena de arriba (menor prioridad)
+    a abajo (mayor prioridad)
+*/

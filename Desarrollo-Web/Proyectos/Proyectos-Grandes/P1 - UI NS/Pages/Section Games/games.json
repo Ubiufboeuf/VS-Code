@@ -1,0 +1,124 @@
+{
+    "games": [
+        {
+            "identifier": "i#0001",
+            "idGameTDB": "AQMXA",
+            "name": "Super Mario Bros. Wonder",
+            "fullName": "Super Mario Bros. Wonder",
+            "regions": "all",
+            "thisRegion": "",
+            "console": "Switch",
+            "ESRB": "E",
+            "PEGI": "3",
+            "release": "20-10-2023",
+            "assets": {
+                "cover": "",
+                "poster": "",
+                "banner": "",
+                "logo": "",
+                "localVideo": "",
+                "ytVideo": ""
+            }
+        },
+        {
+            "identifier": "i#0002",
+            "idGameTDB": "",
+            "name": "Tloz: Tears of the Kingdom",
+            "fullName": "The Legend of Zelda: Tears of the Kingdom",
+            "regions": "",
+            "thisRegion": "",
+            "console": "Switch",
+            "ESRB": "",
+            "PEGI": "",
+            "release": "",
+            "assets": {
+                "cover": "",
+                "poster": "",
+                "banner": "",
+                "logo": "",
+                "localVideo": "",
+                "ytVideo": ""
+            }
+        },
+        {
+            "identifier": "i#0003",
+            "idGameTDB": "",
+            "name": "Splatoon 3",
+            "fullName": "Splatoon 3",
+            "regions": "",
+            "thisRegion": "",
+            "console": "Switch",
+            "ESRB": "",
+            "PEGI": "",
+            "release": "",
+            "assets": {
+                "cover": "",
+                "poster": "",
+                "banner": "",
+                "logo": "",
+                "localVideo": "",
+                "ytVideo": ""
+            }
+        },
+        {
+            "identifier": "i#0004",
+            "idGameTDB": "",
+            "name": "Super Mario Odyssey",
+            "fullName": "Super Mario Odyssey",
+            "regions": "",
+            "thisRegion": "",
+            "console": "Switch",
+            "ESRB": "",
+            "PEGI": "",
+            "release": "",
+            "assets": {
+                "cover": "",
+                "poster": "",
+                "banner": "",
+                "logo": "",
+                "localVideo": "",
+                "ytVideo": ""
+            }
+        },
+        {
+            "identifier": "i#0005",
+            "idGameTDB": "",
+            "name": "Tloz: Breath of the Wild",
+            "fullName": "The Legend of Zelda: Breath of the Wild",
+            "regions": "",
+            "thisRegion": "",
+            "console": "Switch",
+            "ESRB": "",
+            "PEGI": "",
+            "release": "",
+            "assets": {
+                "cover": "",
+                "poster": "",
+                "banner": "",
+                "logo": "",
+                "localVideo": "",
+                "ytVideo": ""
+            }
+        },
+        {
+            "identifier": "i#0006",
+            "idGameTDB": "",
+            "name": "Mario Kart 8 Deluxe",
+            "fullName": "Mario Kart 8 Deluxe",
+            "regions": "",
+            "thisRegion": "",
+            "console": "Switch",
+            "ESRB": "",
+            "PEGI": "",
+            "release": "",
+            "assets": {
+                "cover": "",
+                "poster": "",
+                "banner": "",
+                "logo": "",
+                "localVideo": "",
+                "ytVideo": ""
+            }
+        }
+    ]
+}

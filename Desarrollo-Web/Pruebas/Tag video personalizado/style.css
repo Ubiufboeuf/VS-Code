@@ -1,0 +1,74 @@
+:root {
+    --ph: 10px;
+}
+
+body {
+    background-color: #111;
+    color: #e4e4e4;
+    display: flex;
+}
+
+input[type="range"] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    /*  slider progress trick  */
+    overflow: hidden;
+    border-radius: 16px;
+    height: 20px;
+}
+
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 16px;
+}
+
+/* Thumb: webkit */
+input[type="range"]::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #f50;
+    /*  slider progress trick  */
+}
+
+p {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+button {
+    display: flex;
+    position: absolute;
+    right: 80px;
+    top: 100px;
+    z-index: 1;
+    opacity: 0;
+    transition: .1s ease;
+}
+
+video:hover+button,
+button:hover {
+    opacity: 1;
+}
+
+video {
+    height: 300px;
+    margin-left: 50px;
+    margin-top: 50px;
+}

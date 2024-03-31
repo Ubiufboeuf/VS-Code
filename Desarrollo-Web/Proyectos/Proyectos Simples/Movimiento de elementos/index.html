@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Movimiento de elementos</title>
+    </head>
+    <body style="background-color: #ccc">
+        <header>
+            <p>Espera...</p>
+            <h1>Prueba de movimiento de elementos con HTML, CSS, y JS</h1>
+        </header>
+
+        <main>
+            <div>
+                <img
+                    class="img unselected"
+                    id="img1"
+                    src="pixel-jeff-clipc-s (1).webp"
+                />
+                <img
+                    class="img unselected"
+                    id="img2"
+                    src="pixel-jeff-clipc-s (2).webp"
+                />
+                <img
+                    class="img unselected"
+                    id="img3"
+                    src="pixel-jeff-clipc-s (3).webp"
+                />
+                <img
+                    class="img unselected"
+                    id="img4"
+                    src="pixel-jeff-clipc-s (4).webp"
+                />
+                <img
+                    class="img unselected"
+                    id="img5"
+                    src="pixel-jeff-clipc-s (5).webp"
+                />
+                <img
+                    class="img unselected"
+                    id="img6"
+                    src="pixel-jeff-clipc-s (6).webp"
+                />
+                <img
+                    class="img unselected"
+                    id="img7"
+                    src="pixel-jeff-clipc-s (7).webp"
+                />
+                <img
+                    class="img unselected"
+                    id="img8"
+                    src="pixel-jeff-clipc-s (8).webp"
+                />
+            </div>
+        </main>
+
+        <script>
+            let body = document.querySelector("body");
+            let p = document.querySelector("p");
+            let imgs = document.querySelectorAll(".img");
+            let img1 = document.querySelector("#img1");
+            let selected;
+            let activeImg = false;
+            let pressing = false;
+
+            console.log("Ejecución 1");
+
+            function ex() {
+                console.log("Ejecución 2");
+            }
+
+            setTimeout(ex, 50);
+
+            function action() {
+                p.innerHTML = "Recargado!!";
+            }
+
+            setTimeout(action, 500);
+
+            // Fin del timeout
+
+            [...imgs].forEach((img) => {
+                img.addEventListener("click", () => {
+                    img.classList.toggle("selected");
+                    img.classList.toggle("unselected");
+                    if (img.classList.contains("selected")) {
+                        selected = true;
+                    }
+                });
+            });
+
+            for (let i = 0; i < imgs.length; i++) {
+                imgs[i].addEventListener("click", () => {
+                    console.log(`imgs[` + i + `] was clicked!`);
+                    // console.log(imgs[i]);
+                    activeImg = true;
+                    if (selected == true) {
+                        [...imgs].forEach((img) => {
+                            img.classList.remove("selected");
+                            img.classList.add("unselected");
+                            img.classList.remove("right-of-selected");
+                            img.classList.remove("left-of-selected");
+                        });
+                        imgs[i].classList.add("selected");
+                        imgs[i].classList.remove("unselected");
+                        selected = false;
+                        imgs[i - 1].classList.add("left-of-selected");
+                        imgs[i + 1].classList.add("right-of-selected");
+                    }
+
+                    body.addEventListener("click", (event) => {
+                        if (!event.target.classList.contains("selected")) {
+                            [...imgs].forEach((img) => {
+                                img.classList.remove("selected");
+                                img.classList.add("unselected");
+                                img.classList.remove("right-of-selected");
+                                img.classList.remove("left-of-selected");
+                            });
+                        }
+                    });
+                    console.log(imgs[i]);
+                });
+            }
+        </script>
+    </body>
+</html>
