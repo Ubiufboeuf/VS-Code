@@ -287,7 +287,7 @@ button {
     }
 
     #extra-of-game {
-        background-color: #f0f3;
+        /* background-color: #f0f3; */
         margin-left: auto;
         height: 46%;
         width: 62.5%;
@@ -308,7 +308,7 @@ button {
         margin-top: auto;
         cursor: pointer;
         position: relative;
-        outline: .4vh dashed gray;
+        /* outline: .4vh dashed gray; */
     }
 
     #div-video>#video-banner {
@@ -317,7 +317,7 @@ button {
     }
 
     #div-logo {
-        background-color: #fff3;
+        /* background-color: #fff3; */
         width: 46.7%;
         display: flex;
         justify-content: center;
@@ -326,7 +326,7 @@ button {
     }
 
     #div-logo>img {
-        background-color: brown;
+        /* background-color: brown; */
         max-height: 70%;
         max-width: 80%;
     }
