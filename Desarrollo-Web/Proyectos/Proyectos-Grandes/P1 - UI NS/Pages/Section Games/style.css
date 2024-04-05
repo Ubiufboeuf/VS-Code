@@ -186,6 +186,10 @@ button {
         transition: transform .2s linear;
     }
 
+    .time {
+        transition: transform .2s linear;
+    }
+
     #time-p {
         /* background-color: violet; */
         display: flex;
@@ -235,6 +239,7 @@ button {
         height: 45%;
         margin-right: 14%;
         transition: transform .2s linear;
+        aspect-ratio: 37.13/20.63;
     }
 
     /* Events */
@@ -246,8 +251,8 @@ button {
         transform: scale(1.2);
     }
 
-    #time-p:hover,
-    #time-p:focus,
+    .time:hover,
+    .time:focus,
     .batery:hover,
     .batery:focus {
         transform: scale(1.1);
@@ -278,10 +283,11 @@ button {
         flex-direction: column;
         position: relative;
         overflow: hidden;
+        margin-inline: 2vw;
     }
 
     #extra-of-game {
-        /* background-color: #f0f3; */
+        background-color: #f0f3;
         margin-left: auto;
         height: 46%;
         width: 62.5%;
@@ -302,36 +308,40 @@ button {
         margin-top: auto;
         cursor: pointer;
         position: relative;
+        outline: .4vh dashed gray;
     }
 
-    #div-video>video {
+    #div-video>#video-banner {
         height: 100%;
-        opacity: 1;
         aspect-ratio: 16/9;
     }
 
     #div-logo {
-        /* background-color: #fff3; */
+        background-color: #fff3;
         width: 46.7%;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
+        padding-top: 5%;
     }
 
     #div-logo>img {
-        /* background-color: brown; */
-        height: 67%;
-        margin-bottom: 6%;
-        margin-right: 7%;
+        background-color: brown;
+        max-height: 70%;
+        max-width: 80%;
     }
 
     #contenedor-div-games {
         /* background-color: #f0f3; */
+        display: flex;
+        /* align-self: flex-start; */
+        justify-content: left;
         height: 46%;
         overflow-x: scroll;
-        display: flex;
-        margin-top: 4vh;
         overflow-y: visible;
+        margin-top: 4vh;
+        margin-inline: 2vw;
+        /* margin-left: 30%; */
     }
 
     #contenedor-div-games::-webkit-scrollbar-thumb {
@@ -342,38 +352,96 @@ button {
         cursor: grabbing;
     }
 
+    .cdg-animated {
+        animation: 2s cdg-animation forwards;
+    }
+
+    .cdg-restart {
+        animation: 2s cdg-restart forwards;
+    }
+
+    @keyframes cdg-animation {
+        0% {
+            align-self: flex-start;
+            width: auto;
+        }
+
+        10% {
+            align-self: flex-start;
+            width: 100%;
+        }
+
+        25% {
+            align-self: flex-end;
+            /* width: 91%; */
+        }
+
+        50% {
+            width: 60%;
+            /* align-self: flex-end; */
+        }
+
+        80% {
+            align-self: flex-end;
+        }
+
+        100% {
+            align-self: flex-end;
+            width: 60%;
+
+        }
+    }
+
+    @keyframes cdg-restart {
+        0% {
+            align-self: flex-end;
+            width: 60%;
+        }
+
+        10% {
+            align-self: flex-end;
+        }
+
+        50% {
+            width: 100%;
+        }
+
+        80% {
+            align-self: flex-start;
+        }
+
+        100% {
+            align-self: flex-start;
+            width: auto;
+        }
+    }
+
     #div-games {
         /* background-color: #00f3; */
         height: 100%;
-        width: 200vw;
+        /* width: 200vw; */
         /* align-self: flex-start; */
         display: flex;
         align-items: center;
-        justify-content: left;
+        justify-content: center;
         gap: 3vw;
         gap: 7vh;
-        /* margin-right: 2.6%; */
         flex-wrap: nowrap;
-        margin-left: 10%;
-        padding-inline: 3vw;
+        /* margin-inline: 4%; */
+        /* padding-inline: 3vw; */
+        padding-inline: .5vw;
         position: relative;
-        overflow: visible;
-    }
-
-    .div-pruebas {
-        background-color: black;
-        height: 50px;
-        width: 50px;
+        overflow: visible; 
     }
 
     .game {
         /* background-color: #f007; */
         display: flex;
         height: 95%;
-        aspect-ratio: 20/30.2;
+        aspect-ratio: 2/3;
         justify-content: center;
         align-items: center;
-        border-radius: 8%;
+        border-radius: 2vh;
         transition: transform .3s ease;
         position: relative;
         overflow: hidden;
@@ -387,6 +455,15 @@ button {
 
     .game>img {
         width: 100%;
+        height: 100%;
+    }
+
+    .noCover {
+        border-radius: 0;
+    }
+
+    .noCover>img {
+        height: 100%;
     }
 
     .game-info {
@@ -432,6 +509,53 @@ button {
         margin-right: auto;
         z-index: 1;
         margin-bottom: 7%;
+    }
+
+    .add-game {
+        background-color: #111;
+        outline: solid #ccc;
+        display: flex;
+        height: 95%;
+        aspect-ratio: 2/3;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2vh;
+        transition: transform .3s ease;
+        position: relative;
+        overflow: hidden;
+        order: 999999;
+    }
+
+    .add-game {
+        opacity: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        height: 100%;
+        padding-bottom: 10%;
+        gap: 5%;
+        transition: .3s ease;
+        padding-inline: 5%;
+    }
+
+    .game-info::before {
+        content: '';
+        position: absolute;
+        background: linear-gradient(transparent 0%, black 100%);
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transform: translateY(5%);
+    }
+
+    .add-game>h4 {
+        opacity: 1;
+        color: white;
+        font-size: 1vh;
+        transition: .3 ease;
     }
 
     footer {

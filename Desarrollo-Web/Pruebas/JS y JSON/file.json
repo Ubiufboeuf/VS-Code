@@ -2,7 +2,7 @@
     "games": [
         {
             "identifier": "identificador",
-            "idGameTDB": "",
+            "idGameTDB": "987654",
             "name": "",
             "fullName": "",
             "regions": "",

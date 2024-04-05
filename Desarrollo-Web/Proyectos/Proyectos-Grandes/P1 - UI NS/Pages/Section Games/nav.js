@@ -4,12 +4,17 @@ const hora_actual = document.getElementById("time-p");
 
 const intervalo = setInterval(() => {
     const local = new Date();
+    const hour = local.getHours();
 
     let hora = local.toLocaleTimeString("en-US", {
         hour: "numeric",
         minute: "numeric",
-        hour12: true,
+        hour12: false,
     });
+
+    if (hour < 10) {
+        hora = "0" + hora;
+    }
 
     hora_actual.innerHTML = `<p>${hora}</p>`;
 }, 1000);
@@ -26,22 +31,22 @@ const intervalo = setInterval(() => {
 
 /* Inicio - Control de batería */
 
-function batttick() {
-    navigator.getBattery().then((battery) => {
-        let carga = "";
-        let color = "";
-        carga = battery.level * 100 + "%";
+// function batttick() {
+//     navigator.getBattery().then((battery) => {
+//         let carga = "";
+//         let color = "";
+//         carga = battery.level * 100 + "%";
 
-        if (battery.charging) {
-            // carga += " ⚡";
-            color = "green";
-        }
-        console.log(color, carga);
-        document.getElementById("batery-p").innerHTML = carga;
-        // document.getElementById("batt").style.color = color;
-    });
-}
-batttick();
+//         if (battery.charging) {
+//             // carga += " ⚡";
+//             color = "green";
+//         }
+//         console.log(color, carga);
+//         document.getElementById("batery-p").innerHTML = carga;
+//         // document.getElementById("batt").style.color = color;
+//     });
+// }
+// batttick();
 
 /* Fin - Control de batería */
 

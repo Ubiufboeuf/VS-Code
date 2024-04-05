@@ -34,6 +34,8 @@ for ([key, value] of en.entries()) {
     console.log("Clave: " + key, "\\|/", "valor: " + value);
 }
 
-
-
-fetch("./file.json", )
+fetch("./file.json")
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data.games[0].idGameTDB);
+    });

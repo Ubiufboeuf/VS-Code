@@ -1,124 +1,90 @@
 {
     "games": [
         {
-            "identifier": "i#0001",
             "idGameTDB": "AQMXA",
-            "name": "Super Mario Bros. Wonder",
+            "name": "Super Mario Wonder",
             "fullName": "Super Mario Bros. Wonder",
-            "regions": "all",
-            "thisRegion": "",
-            "console": "Switch",
-            "ESRB": "E",
-            "PEGI": "3",
-            "release": "20-10-2023",
+            "border": 0,
             "assets": {
-                "cover": "",
-                "poster": "",
-                "banner": "",
-                "logo": "",
-                "localVideo": "",
+                "cover": "../../Assets/Imgs/Covers/Cover - Mario Bros Wonder.webp",
+                "poster": "[poster]",
+                "banner": "../../Assets/Imgs/Banners/Banner - Mario Bros Wonder.webp",
+                "logo": "../../Assets/Imgs/Logos/Logo - Mario Bros Wonder.webp",
+                "localVideo": "[localVideo]",
                 "ytVideo": ""
             }
         },
         {
-            "identifier": "i#0002",
-            "idGameTDB": "",
+            "idGameTDB": "AXN7A",
             "name": "Tloz: Tears of the Kingdom",
             "fullName": "The Legend of Zelda: Tears of the Kingdom",
-            "regions": "",
-            "thisRegion": "",
-            "console": "Switch",
-            "ESRB": "",
-            "PEGI": "",
-            "release": "",
+            "border": 0,
             "assets": {
-                "cover": "",
-                "poster": "",
-                "banner": "",
-                "logo": "",
-                "localVideo": "",
+                "cover": "../../Assets/Imgs/Covers/Cover - Tloz Totk.webp",
+                "poster": "[poster]",
+                "banner": "[banner]",
+                "logo": "../../Assets/Imgs/Logos/Logo - Tloz Totk.webp",
+                "localVideo": "[localVideo]",
                 "ytVideo": ""
             }
         },
         {
-            "identifier": "i#0003",
-            "idGameTDB": "",
-            "name": "Splatoon 3",
-            "fullName": "Splatoon 3",
-            "regions": "",
-            "thisRegion": "",
-            "console": "Switch",
-            "ESRB": "",
-            "PEGI": "",
-            "release": "",
-            "assets": {
-                "cover": "",
-                "poster": "",
-                "banner": "",
-                "logo": "",
-                "localVideo": "",
-                "ytVideo": ""
-            }
-        },
-        {
-            "identifier": "i#0004",
-            "idGameTDB": "",
-            "name": "Super Mario Odyssey",
-            "fullName": "Super Mario Odyssey",
-            "regions": "",
-            "thisRegion": "",
-            "console": "Switch",
-            "ESRB": "",
-            "PEGI": "",
-            "release": "",
-            "assets": {
-                "cover": "",
-                "poster": "",
-                "banner": "",
-                "logo": "",
-                "localVideo": "",
-                "ytVideo": ""
-            }
-        },
-        {
-            "identifier": "i#0005",
-            "idGameTDB": "",
-            "name": "Tloz: Breath of the Wild",
-            "fullName": "The Legend of Zelda: Breath of the Wild",
-            "regions": "",
-            "thisRegion": "",
-            "console": "Switch",
-            "ESRB": "",
-            "PEGI": "",
-            "release": "",
-            "assets": {
-                "cover": "",
-                "poster": "",
-                "banner": "",
-                "logo": "",
-                "localVideo": "",
-                "ytVideo": ""
-            }
-        },
-        {
-            "identifier": "i#0006",
-            "idGameTDB": "",
+            "idGameTDB": "AABPA",
             "name": "Mario Kart 8 Deluxe",
             "fullName": "Mario Kart 8 Deluxe",
-            "regions": "",
-            "thisRegion": "",
-            "console": "Switch",
-            "ESRB": "",
-            "PEGI": "",
-            "release": "",
+            "border": 8,
             "assets": {
-                "cover": "",
-                "poster": "",
-                "banner": "",
-                "logo": "",
-                "localVideo": "",
+                "cover": "../../Assets/Imgs/Covers/Cover - Mario Kart 8 Deluxe.webp",
+                "poster": "[poster]",
+                "banner": "../../Assets/Imgs/Banners/Banner - Mario Kart 8 Deluxe.webp",
+                "logo": "../../Assets/Imgs/Logos/Logo - Mario Kart 8 Deluxe.webp",
+                "localVideo": "../../Assets/Vids/Banners/Trailer - Mario Odyssey - 1080p",
+                "ytVideo": ""
+            }
+        },
+        {
+            "idGameTDB": "AAACA",
+            "name": "Super Mario Odyssey",
+            "fullName": "Super Mario Odyssey",
+            "border": 8,
+            "assets": {
+                "cover": "../../Assets/Imgs/Covers/Cover - Mario Odyssey.webp",
+                "poster": "[poster]",
+                "banner": "../../Assets/Imgs/Banners/Banner - Mario Odyssey - 4k.webp",
+                "logo": "../../Assets/Imgs/Logos/Logo - Mario Odyssey.webp",
+                "localVideo": "../../Assets/Vids/Banners/Trailer - Mario Odyssey - 1080p",
+                "ytVideo": "https://www.youtube.com/watch?v=5kcdRBHM7kM"
+            }
+        },
+        
+        {
+            "idGameTDB": "AAAAA",
+            "name": "Tloz: Breath of the Wild",
+            "fullName": "The Legend of Zelda: Breath of the Wild",
+            "border": 8,
+            "assets": {
+                "cover": "../../Assets/Imgs/Covers/Cover - Tloz Botw.webp",
+                "poster": "../../Assets/Imgs/Posters/Poster - Tloz Botw - Mirando Horizonte.webp",
+                "banner": "[banner]",
+                "logo": "../../Assets/Imgs/Logos/Logo - Tloz Botw.webp",
+                "localVideo": "../../Assets/Vids/Banners/Trailer - Tloz Botw - 1080p",
+                "ytVideo": ""
+            }
+        },
+        {
+            "idGameTDB": "AV5JA",
+            "name": "Splatoon 3",
+            "fullName": "Splatoon 3",
+            "border": 8,
+            "assets": {
+                "cover": "../../Assets/Imgs/Covers/Cover - Splatoon 3.webp",
+                "poster": "[poster]",
+                "banner": "[banner]",
+                "logo": "../../Assets/Imgs/Logos/Logo - Splatoon 3.webp",
+                "localVideo": "[localVideo]",
                 "ytVideo": ""
             }
         }
+        
     ]
 }
