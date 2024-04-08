@@ -15,10 +15,10 @@
         />
         <title>Juegos</title>
     </head>
-    <body>
+    <body oncontextmenu="return false">
         <div id="cuerpo-web">
             <!-- #region nav -->
-            <nav>
+            <header>
                 <button class="button icon">
                     <img
                         class="buttonImg"
@@ -119,22 +119,31 @@
                         alt="Batería"
                     />
                 </button>
-            </nav>
+            </header>
             <!-- #endregion -->
 
             <div class="linea horizontal"></div>
 
             <!-- #region main -->
             <main>
+                <div class="contenedor-js">
+                    <div class="div-njs">
+                        <h1 class="nombre-js"></h1>
+                    </div>
+                    <button class="juego-seleccionado">
+                        <img />
+                    </button>
+                </div>
                 <div id="extra-of-game">
                     <div id="div-video">
                         <iframe
-                                id="video-banner"
-                                src="https://www.youtube.com/embed/5kcdRBHM7kM?si=9kn_VIOm8wJAHm0H"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allowfullscreen
-                            ></iframe>
+                            id="video-banner"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
                     </div>
                     <div id="div-logo">
                         <img id="logo" alt="Logo del juego" />

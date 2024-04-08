@@ -4,56 +4,52 @@
             "idGameTDB": "AQMXA",
             "name": "Super Mario Wonder",
             "fullName": "Super Mario Bros. Wonder",
-            "border": 0,
             "assets": {
                 "cover": "../../Assets/Imgs/Covers/Cover - Mario Bros Wonder.webp",
                 "poster": "[poster]",
                 "banner": "../../Assets/Imgs/Banners/Banner - Mario Bros Wonder.webp",
                 "logo": "../../Assets/Imgs/Logos/Logo - Mario Bros Wonder.webp",
                 "localVideo": "[localVideo]",
-                "ytVideo": ""
+                "ytVideo": "https://www.youtube.com/embed/JStAYvbeSHc?si=lkmhSst1z5vdjWU8"
             }
         },
         {
             "idGameTDB": "AXN7A",
             "name": "Tloz: Tears of the Kingdom",
             "fullName": "The Legend of Zelda: Tears of the Kingdom",
-            "border": 0,
             "assets": {
                 "cover": "../../Assets/Imgs/Covers/Cover - Tloz Totk.webp",
                 "poster": "[poster]",
                 "banner": "[banner]",
                 "logo": "../../Assets/Imgs/Logos/Logo - Tloz Totk.webp",
                 "localVideo": "[localVideo]",
-                "ytVideo": ""
+                "ytVideo": "https://www.youtube.com/embed/d9rdl3fGfYQ?si=W_jX80TREfLVsyxd"
             }
         },
         {
             "idGameTDB": "AABPA",
             "name": "Mario Kart 8 Deluxe",
             "fullName": "Mario Kart 8 Deluxe",
-            "border": 8,
             "assets": {
                 "cover": "../../Assets/Imgs/Covers/Cover - Mario Kart 8 Deluxe.webp",
                 "poster": "[poster]",
                 "banner": "../../Assets/Imgs/Banners/Banner - Mario Kart 8 Deluxe.webp",
                 "logo": "../../Assets/Imgs/Logos/Logo - Mario Kart 8 Deluxe.webp",
                 "localVideo": "../../Assets/Vids/Banners/Trailer - Mario Odyssey - 1080p",
-                "ytVideo": ""
+                "ytVideo": "https://www.youtube.com/embed/tKlRN2YpxRE?si=OdpPa-HCz1Oc7n49"
             }
         },
         {
             "idGameTDB": "AAACA",
             "name": "Super Mario Odyssey",
             "fullName": "Super Mario Odyssey",
-            "border": 8,
             "assets": {
                 "cover": "../../Assets/Imgs/Covers/Cover - Mario Odyssey.webp",
                 "poster": "[poster]",
                 "banner": "../../Assets/Imgs/Banners/Banner - Mario Odyssey - 4k.webp",
                 "logo": "../../Assets/Imgs/Logos/Logo - Mario Odyssey.webp",
                 "localVideo": "../../Assets/Vids/Banners/Trailer - Mario Odyssey - 1080p",
-                "ytVideo": "https://www.youtube.com/watch?v=5kcdRBHM7kM"
+                "ytVideo": "https://www.youtube.com/embed/5kcdRBHM7kM?si=00vwJb7kEXOT_FkZ"
             }
         },
         
@@ -61,28 +57,26 @@
             "idGameTDB": "AAAAA",
             "name": "Tloz: Breath of the Wild",
             "fullName": "The Legend of Zelda: Breath of the Wild",
-            "border": 8,
             "assets": {
                 "cover": "../../Assets/Imgs/Covers/Cover - Tloz Botw.webp",
                 "poster": "../../Assets/Imgs/Posters/Poster - Tloz Botw - Mirando Horizonte.webp",
                 "banner": "[banner]",
                 "logo": "../../Assets/Imgs/Logos/Logo - Tloz Botw.webp",
                 "localVideo": "../../Assets/Vids/Banners/Trailer - Tloz Botw - 1080p",
-                "ytVideo": ""
+                "ytVideo": "https://www.youtube.com/embed/ofH5ptn5w-A?si=wPMHPIH1CHX6ItWA"
             }
         },
         {
             "idGameTDB": "AV5JA",
             "name": "Splatoon 3",
             "fullName": "Splatoon 3",
-            "border": 8,
             "assets": {
                 "cover": "../../Assets/Imgs/Covers/Cover - Splatoon 3.webp",
                 "poster": "[poster]",
                 "banner": "[banner]",
                 "logo": "../../Assets/Imgs/Logos/Logo - Splatoon 3.webp",
                 "localVideo": "[localVideo]",
-                "ytVideo": ""
+                "ytVideo": "https://www.youtube.com/embed/RPwwXvafJBY?si=H4EQ73aYFhnzzsDW"
             }
         }
         

@@ -6,7 +6,7 @@ const intervalo = setInterval(() => {
     const local = new Date();
     const hour = local.getHours();
 
-    let hora = local.toLocaleTimeString("en-US", {
+    let hora = local.toLocaleTimeString("es-ES", {
         hour: "numeric",
         minute: "numeric",
         hour12: false,
@@ -14,6 +14,21 @@ const intervalo = setInterval(() => {
 
     if (hour < 10) {
         hora = "0" + hora;
+    }
+
+    let tarde;
+    const cw = document.querySelector("#cuerpo-web");
+
+    if (hour >= 24 || hour <= 4) {
+        tarde = true;
+    } else {
+        tarde = false;
+    }
+
+    if (tarde == true) {
+        cw.setAttribute("style", "background-color: #060606;");
+    } else {
+        cw.removeAttribute("style");
     }
 
     hora_actual.innerHTML = `<p>${hora}</p>`;

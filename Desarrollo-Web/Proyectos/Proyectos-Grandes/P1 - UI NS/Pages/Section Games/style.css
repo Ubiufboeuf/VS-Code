@@ -41,6 +41,7 @@ body {
 
 #cuerpo-web {
     background-color: #2d2d2d;
+    /* background-color: #111; */
     aspect-ratio: 16/9;
     /* background-image: url(../../Assets/Imgs/M\ UI\ R\ -\ NS\ \(2\).png); */
     background-size: 100%;
@@ -59,7 +60,7 @@ button {
         height: 100%;
     }
 
-    nav {
+    header {
         /* background-color: #f003; */
         height: 11%;
         display: flex;
@@ -286,6 +287,131 @@ button {
         margin-inline: 2vw;
     }
 
+    .contenedor-js {
+        /* background-color: gray; */
+        display: none;
+        position: absolute;
+        opacity: 0;
+        height: 100%;
+        width: 25%;
+        max-width: 30%;
+        aspect-ratio: 2/3;
+        top: 50%;
+        left: 6%;
+        transform: translateY(-50%);
+        border-radius: 8%;
+        overflow: hidden;
+        cursor: default;
+    }
+
+    .div-njs {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+        /* background-color: red; */
+        width: 100%;
+        left: 0%;
+        top: 2.3%;
+        text-wrap: balance;
+        overflow-x: scroll;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-njs::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+    .nombre-js {
+        /* background-color: darkviolet; */
+        color: #55aad2;
+        text-align: center;
+        width: 100%;
+        font-size: 3.5vh;
+    }
+
+    .juego-seleccionado {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+        background-color: gray;
+        height: 75%;
+        aspect-ratio: 2/3;
+        top: 54%;
+        transform: translateY(-47.2%);
+        left: 5%;
+        border-radius: 8%;
+        overflow: hidden;
+        cursor: default;
+        transition: all 1s linear;
+    }
+
+    .juego-seleccionado::before {
+        display: flex;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+    }
+
+    .juego-selecccionado:hover>.juego-seleccionado::after {
+        opacity: 1;
+    }
+
+    .juego-seleccionado>img {
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 2/3;
+        transition: all 1s linear;
+    }
+
+    .ap-js {
+        animation: aparicion-juego-seleccionado 1s both;
+        display: flex;
+        opacity: 1;
+    }
+
+    .rm-js {
+        animation: remove-juego-seleccionado 1s both;
+        display: none;
+        opacity: 0;
+    }
+
+    @keyframes aparicion-juego-seleccionado {
+        0% {
+            display: none;
+            opacity: 0;
+        }
+
+        70% {
+            display: none;
+            opacity: 0;
+        }
+
+        100% {
+            display: flex;
+            opacity: 1;
+        }
+    }
+
+    @keyframes remove-juego-seleccionado {
+        0% {
+            display: flex;
+            opacity: 1;
+        }
+
+        30% {
+            display: none;
+            opacity: 0;
+        }
+
+        100% {
+            display: none;
+            opacity: 0;
+        }
+    }
+
     #extra-of-game {
         /* background-color: #f0f3; */
         margin-left: auto;
@@ -337,6 +463,7 @@ button {
         /* align-self: flex-start; */
         justify-content: left;
         height: 46%;
+        width: fit-content;
         overflow-x: scroll;
         overflow-y: visible;
         margin-top: 4vh;
@@ -431,7 +558,7 @@ button {
         /* padding-inline: 3vw; */
         padding-inline: .5vw;
         position: relative;
-        overflow: visible; 
+        overflow: visible;
     }
 
     .game {
@@ -625,7 +752,7 @@ button {
         height: 100%;
     }
 
-    nav {
+    header {
         /* background-color: #f003; */
         height: 11%;
         display: flex;
