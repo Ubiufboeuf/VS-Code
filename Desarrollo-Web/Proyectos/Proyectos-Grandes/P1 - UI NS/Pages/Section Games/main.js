@@ -106,8 +106,8 @@ const functionFetch = (data) => {
 
         /* Inicio - gaem click */
 
-        for (let i = 0; i < data.games.length; i++) {
-            let video = data.games[i].assets.ytVideo + "&autoplay=1&mute=1";
+        /* for (let i = 0; i < data.games.length; i++) {
+            // let video = data.games[i].assets.ytVideo + "&autoplay=1&mute=1";
             let da = false; // da es div-animation
             let title = document.querySelector(".nombre-js");
 
@@ -159,7 +159,7 @@ const functionFetch = (data) => {
                     title.animate(titleAnimation, titleAnimationOptions);
 
                     // Video del banner del juego
-                    gameBanner.setAttribute("src", video);
+                    // gameBanner.setAttribute("src", video);
 
                     //
                 } else {
@@ -168,7 +168,7 @@ const functionFetch = (data) => {
 
                     game = juegos[i];
 
-                    if (game.children[1].getAttribute("style", "opacity: 1;")) {
+                    if (game.children[1].hasAttribute("style")) {
                         // Movimiento del div-games
                         cdg.classList.remove("cdg-animated");
                         cdg.classList.add("cdg-restart");
@@ -183,13 +183,16 @@ const functionFetch = (data) => {
                         // Título del juego sobre el juego seleccionado
                         title.textContent = "";
 
-                        for (let i = 0; i < data.games.length; i++) {
+                        for (let i = 0; i < juegos.length; i++) {
                             juegos[i].children[1].children[0].textContent =
                                 data.games[i].name;
                             juegos[i].children[1].removeAttribute("style");
+                            console.log("xd");
                         }
-                        // 
+                        //
+                        console.log("c")
                     } else {
+                        console.log("d")
                         // Movimiento del div-games
 
                         // Texto h4 de la información del juego
@@ -197,6 +200,7 @@ const functionFetch = (data) => {
                             "Seleccionado";
                         game.children[1].setAttribute("style", "opacity: 1;");
 
+                        console.log("establecido");
                         // Contenedor del juego seleccionado
                         js.children[0].setAttribute(
                             "src",
@@ -209,17 +213,19 @@ const functionFetch = (data) => {
                         title.animate(titleAnimation, titleAnimationOptions);
                         console.log(title.getAnimations);
 
-                        gameBanner.setAttribute("src", video);
+                        // gameBanner.setAttribute("src", video);
 
-                        for (let i = 0; i < data.games.length; i++) {
+                        console.log("b");
+                        for (let i = 0; i < juegos.length; i++) {
                             juegos[i].children[1].children[0].textContent =
                                 data.games[i].name;
                             juegos[i].children[1].removeAttribute("style");
+                            console.log("xd");
                         }
                     }
                 }
             });
-        }
+        } */
     }
     extraOfGames(data);
 };
