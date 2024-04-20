@@ -1,0 +1,16 @@
+{
+  "name": "nav-01",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "host": "astro dev --host"
+  },
+  "dependencies": {
+    "astro": "^4.6.3"
+  }
+}

@@ -25,10 +25,7 @@ juego_base.append(img, div);
 img.setAttribute("alt", "Juego");
 div.classList.add("game-info");
 div.append(h4, logoNintendo);
-logoNintendo.setAttribute(
-    "src",
-    "../../Assets/Imgs/Logos/Logo - Nintendo - Blanco a100.svg"
-);
+logoNintendo.setAttribute("src", "../../Assets/Imgs/Logos/Logo - Nintendo - Blanco a100.svg");
 logoNintendo.setAttribute("alt", "Nintendo&reg;");
 
 /* Fin - Variables Globales */
@@ -48,7 +45,7 @@ fetch("games.json")
 
 /* Inicio - Función con información de 'games.json' */
 
-const functionFetch = (data) => {
+function functionFetch (data) {
     /* Inicio - Creación e implementación de los juegos */
 
     function functionGames(data) {
@@ -65,10 +62,7 @@ const functionFetch = (data) => {
 
             // Juegos sin carátula
             if (!game.children[0].hasAttribute("src")) {
-                game.children[0].setAttribute(
-                    "src",
-                    "../../Assets/Imgs/Covers/Cover - Case Switch Game.svg"
-                );
+                game.children[0].setAttribute("src", "../../Assets/Imgs/Covers/Cover - Case Switch Game.svg");
                 game.children[0].setAttribute("alt", "noCover");
                 game.classList.add("noCover");
             } else {
@@ -90,6 +84,8 @@ const functionFetch = (data) => {
     function extraOfGames(data) {
         juegos = document.querySelectorAll(".game");
 
+        gameLogo.setAttribute("src", data.games[0].assets.logo);
+
         /* Inicio - game mouseover */
 
         for (let i = 0; i < data.games.length; i++) {
@@ -105,127 +101,105 @@ const functionFetch = (data) => {
         /* ================================================================================================================= */
 
         /* Inicio - gaem click */
+        let divAnim = false;
 
-        /* for (let i = 0; i < data.games.length; i++) {
-            // let video = data.games[i].assets.ytVideo + "&autoplay=1&mute=1";
-            let da = false; // da es div-animation
-            let title = document.querySelector(".nombre-js");
+        juegos.forEach((game) => {
 
-            // let gh4 = game.children[1].children[0].textContent.cloneNode;
+            let idx = game.getAttribute("idx");
 
-            game = juegos[i];
-            // cdg.setAttribute("src", "transition: transform 1s ease");
-            // game.children[1].children[0].textContent = data.games[i].name;
-            js.classList.add("ap-js");
+            let gameTitle = document.querySelector(".nombre-js");
 
-            const titleAnimation = [
+            const titleAnim = [
                 { transform: "translateX(100%)" },
                 { transform: "translateX(-100%)" },
             ];
-            const titleAnimationOptions = {
+
+            const titleAnimOp = {
                 duration: 6000,
                 easing: "linear",
                 iterations: Infinity,
             };
 
-            // console.log(game);
+            js.classList.add("ap-js");
 
             game.addEventListener("click", (event) => {
-                if (da == false) {
-                    da = true;
+                
+                if (divAnim == false) {
+                    divAnim = true;
 
-                    game = juegos[i];
+                    // console.log("if - anim",divAnim);
+                    // console.log("if", game);
 
-                    // Movimiento del div-games
+                    // Se anima la "entrada" (derecha) de los juegos
                     cdg.classList.remove("cdg-restart");
                     cdg.classList.add("cdg-animated");
 
-                    // Texto información del juegp
+                    // Texto informativo del juego
                     game.children[1].setAttribute("style", "opacity: 1;");
                     game.children[1].children[0].textContent = "Seleccionado";
 
-                    // Contenedor del juego seleccionado
+                    // console.log("post style", game);
+
+                    // Se anima la aparición del div del juego seleccionado
                     cjs.classList.remove("rm-js");
                     cjs.classList.add("ap-js");
 
                     // Imagen juego seleccionado
-                    js.children[0].setAttribute(
-                        "src",
-                        data.games[i].assets.cover
-                    );
-
-                    // Título del juego sobre el juego seleccionado
-                    title.textContent = data.games[i].fullName;
-                    title.animate(titleAnimation, titleAnimationOptions);
+                    js.children[0].setAttribute("src", data.games[idx].assets.cover);
+                    
+                    // Título sobre el juego seleccionado
+                    gameTitle.textContent = data.games[idx].fullName;
+                    gameTitle.animate(titleAnim, titleAnimOp);
 
                     // Video del banner del juego
-                    // gameBanner.setAttribute("src", video);
-
-                    //
                 } else {
-                    //
-                    da = false;
-
-                    game = juegos[i];
+                    // console.log("else - anim",divAnim);
+                    // console.log("else", game);
 
                     if (game.children[1].hasAttribute("style")) {
-                        // Movimiento del div-games
+                        divAnim = false;
+
+                        game.children[1].removeAttribute("style");
+                        game.children[1].children[0].textContent = data.games[idx].name;
+                        // console.log("fuera");
+
+
+                        // Se anima la "salida" (izq.) de los juegos
                         cdg.classList.remove("cdg-animated");
                         cdg.classList.add("cdg-restart");
 
-                        // Texto h4 de la información del juego
-                        game.children[1].removeAttribute("style");
 
-                        // Contenedor del juego seleccionado
-                        cjs.classList.remove("rm-js");
+                        // Se anima la aparición del div del juego seleccionado
                         cjs.classList.add("rm-js");
-
-                        // Título del juego sobre el juego seleccionado
-                        title.textContent = "";
-
-                        for (let i = 0; i < juegos.length; i++) {
-                            juegos[i].children[1].children[0].textContent =
-                                data.games[i].name;
-                            juegos[i].children[1].removeAttribute("style");
-                            console.log("xd");
-                        }
-                        //
-                        console.log("c")
+                        cjs.classList.remove("ap-js");
                     } else {
-                        console.log("d")
-                        // Movimiento del div-games
-
-                        // Texto h4 de la información del juego
-                        game.children[1].children[0].textContent =
-                            "Seleccionado";
+                        // console.log("else - else");
+                        for (let i = 0; i < juegos.length; i++) {
+                            juegos[i].children[1].removeAttribute("style");
+                            juegos[i].children[1].children[0].textContent = data.games[i].name;
+                            // console.log("restaurado");
+                        }
                         game.children[1].setAttribute("style", "opacity: 1;");
-
-                        console.log("establecido");
-                        // Contenedor del juego seleccionado
-                        js.children[0].setAttribute(
-                            "src",
-                            juegos[i].assets.cover
-                        );
+                        game.children[1].children[0].textContent = "Seleccionado";
+                        // console.log("nuevo");
 
                         // Imagen juego seleccionado
-                        title.textContent = juegos[i].fullName;
-                        console.log(title);
-                        title.animate(titleAnimation, titleAnimationOptions);
-                        console.log(title.getAnimations);
-
-                        // gameBanner.setAttribute("src", video);
-
-                        console.log("b");
-                        for (let i = 0; i < juegos.length; i++) {
-                            juegos[i].children[1].children[0].textContent =
-                                data.games[i].name;
-                            juegos[i].children[1].removeAttribute("style");
-                            console.log("xd");
-                        }
+                        js.children[0].setAttribute("src", data.games[idx].assets.cover);
+                        
+                        // Título sobre el juego seleccionado
+                        gameTitle.textContent = data.games[idx].fullName;
+                        gameTitle.animate(titleAnim, titleAnimOp);
                     }
                 }
             });
-        } */
+        });
     }
     extraOfGames(data);
 };
+
+let aviso = document.createElement("a");
+aviso.setAttribute("id", "aviso");
+aviso.setAttribute("href", "./aviso.html");
+aviso.textContent = "Ver aviso";
+
+body.append(aviso);
