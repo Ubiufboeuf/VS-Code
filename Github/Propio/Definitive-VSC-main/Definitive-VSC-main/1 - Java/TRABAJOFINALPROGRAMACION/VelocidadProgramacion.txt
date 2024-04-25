@@ -1,5 +1,0 @@
-1. Crea un programa que pida 2 nombres y salude al primero
-2. Crea un programa que pida 2 numeros, los multiplique y muestre el res.
-3. Crea un prog. que pida 1 num. y devuelva mayor si el mismo es 21 o +
-4. Crea... 1 numero al usuario y usando while haga una cuentra regresivadesde x a 0
-5. Crea... 1 num al usuario de 1 a 7 y devuelva el dia de la semana segun el num
