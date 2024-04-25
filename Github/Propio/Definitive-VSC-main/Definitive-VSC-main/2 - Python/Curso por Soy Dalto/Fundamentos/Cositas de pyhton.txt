@@ -1,0 +1,9 @@
+Cositas de pyhton
+
+round() redondea numeros
+len() muestra la cantidada de caracteres
+str.lower() y .upper son los tolower y lohigher case 	de java
+atr.strip() quita los espaios al pedo, creo que cuenta de 2 a más
+
+
+
