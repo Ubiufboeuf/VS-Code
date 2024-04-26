@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="description" content="Horarios">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Horarios IAE 2ºBA 2024</title>
+</head>
+
+<body style="background-color: #222">
+    <h4><span class="material-symbols-outlined">&#xea03</span>Haz click en una materia para obtener más información</h4>
+    <main class="contenedor">
+        <p id="p-horas" class="p">Horas</p>
+        <!--  -->
+        <p class="p dias">Lunes</p>
+        <p class="p dias">Martes</p>
+        <p class="p dias">Miércoles</p>
+        <p class="p dias">Jueves</p>
+        <p class="p dias">Viernes</p>
+        <!--  -->
+        <p class="p hora hora1">13:00 a 13:45</p>
+        <p class="p hora hora2">13:45 a 14:30</p>
+        <p class="p hora hora3 recreo">Recreo</p>
+        <p class="p hora hora4">14:35 a 15:20</p>
+        <p class="p hora hora5">15:20 a 16:05</p>
+        <p class="p hora hora6 recreo">Recreo</p>
+        <p class="p hora hora7">16:10 a 16:55</p>
+        <p class="p hora hora8">16:55 a 17:40</p>
+        <p class="p hora hora9 recreo">Recreo</p>
+        <p class="p hora hora10">17:45 a 18:30</p>
+        <p class="p hora hora11">18:30 a 19:15</p>
+        <!--  -->
+        <article idx="1" class="clase-1 ingles doble">
+            <p>Inglés</p>
+            <div></div>
+        </article>
+        <article idx="2" class="clase-1 diseño-web doble">
+            <p>Diseño Web</p>
+            <div></div>
+        </article>
+        <article idx="3" class="clase-1 lab-redes">
+            <p>LAB Redes</p>
+            <div></div>
+        </article>
+        <article idx="4" class="clase-1 economia doble">
+            <p>Economía</p>
+            <div></div>
+        </article>
+        <article idx="5" class="clase-1 matematicas">
+            <p>Matemáticas</p>
+            <div></div>
+        </article>
+        <article idx="1" class="clase-1 ingles ingles-2">
+            <p>Inglés</p>
+            <div></div>
+        </article>
+        <!--  -->
+        <article idx="6" class="clase-2 fisica doble">
+            <p>Física</p>
+            <div></div>
+        </article>
+        <article idx="7" class="clase-2 geometria doble">
+            <p>Geometría</p>
+            <div></div>
+        </article>
+        <article idx="3" class="clase-2 lab-redes">
+            <p>LAB Redes</p>
+            <div></div>
+        </article>
+        <article idx="4" class="clase-2 economia">
+            <p>Economía</p>
+            <div></div>
+        </article>
+        <article idx="6" class="clase-2 fisica fisica-2">
+            <p>Física</p>
+            <div></div>
+        </article>
+        <article idx="8" class="clase-2 bd">
+            <p>Bases de datos</p>
+            <div></div>
+        </article>
+        <article idx="3" class="clase-2 lab-redes lab-redes-2 doble">
+            <p>LAB Redes</p>
+            <div></div>
+        </article>
+        <!--  -->
+        <article idx="9" class="clase-3 electronica doble">
+            <p>Electrónica</p>
+            <div></div>
+        </article>
+        <article idx="10" class="clase-3 programacion doble">
+            <p>Programación</p>
+            <div></div>
+        </article>
+        <article idx="11" class="clase-3 apt">
+            <p>APT</p>
+            <div></div>
+        </article>
+        <article idx="12" class="clase-3 so">
+            <p>Sistemas Op.</p>
+            <div></div>
+        </article>
+        <article idx="8" class="clase-3 bd doble">
+            <p>Bases de datos</p>
+            <div></div>
+        </article>
+        <article idx="11" class="clase-3 apt apt-2 doble">
+            <p>APT</p>
+            <div></div>
+        </article>
+        <!--  -->
+        <article idx="9" class="clase-4 electronica">
+            <p>Electrónica</p>
+            <div></div>
+        </article>
+        <article idx="10" class="clase-4 programacion">
+            <p>Programación</p>
+            <div></div>
+        </article>
+        <article idx="5" class="clase-4 matematicas">
+            <p>Matemáticas</p>
+            <div></div>
+        </article>
+        <article idx="12" class="clase-4 so doble">
+            <p>Sistemas Op.</p>
+            <div></div>
+        </article>
+        <article idx="7" class="clase-4 geometria">
+            <p>Geometría</p>
+            <div></div>
+        </article>
+    </main>
+
+    <script>
+        const ingles = document.querySelectorAll(".ingles");
+        const dw = document.querySelectorAll(".diseño-web");
+        const lr = document.querySelectorAll(".lab-redes");
+        const economia = document.querySelectorAll(".economia");
+        const mat = document.querySelectorAll(".matematicas");
+        const fisica = document.querySelectorAll(".fisica");
+        const geo = document.querySelectorAll(".geometria");
+        const bd = document.querySelectorAll(".bd");
+        const elec = document.querySelectorAll(".electronica");
+        const prog = document.querySelectorAll(".programacion");
+        const apt = document.querySelectorAll(".apt");
+        const so = document.querySelectorAll(".so");
+
+
+        ingles.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < ingles.length; i++) {
+                    ingles[i].children[1].classList.add("opacity-in");
+                    ingles[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < ingles.length; i++) {
+                    ingles[i].children[1].classList.remove("opacity-in");
+                    ingles[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        dw.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < dw.length; i++) {
+                    dw[i].children[1].classList.add("opacity-in");
+                    dw[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < dw.length; i++) {
+                    dw[i].children[1].classList.remove("opacity-in");
+                    dw[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        lr.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < lr.length; i++) {
+                    lr[i].children[1].classList.add("opacity-in");
+                    lr[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < lr.length; i++) {
+                    lr[i].children[1].classList.remove("opacity-in");
+                    lr[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        economia.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < economia.length; i++) {
+                    economia[i].children[1].classList.add("opacity-in");
+                    economia[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < economia.length; i++) {
+                    economia[i].children[1].classList.remove("opacity-in");
+                    economia[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        mat.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < mat.length; i++) {
+                    mat[i].children[1].classList.add("opacity-in");
+                    mat[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < mat.length; i++) {
+                    mat[i].children[1].classList.remove("opacity-in");
+                    mat[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        fisica.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < fisica.length; i++) {
+                    fisica[i].children[1].classList.add("opacity-in");
+                    fisica[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < fisica.length; i++) {
+                    fisica[i].children[1].classList.remove("opacity-in");
+                    fisica[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        geo.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < geo.length; i++) {
+                    geo[i].children[1].classList.add("opacity-in");
+                    geo[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < geo.length; i++) {
+                    geo[i].children[1].classList.remove("opacity-in");
+                    geo[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        bd.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < bd.length; i++) {
+                    bd[i].children[1].classList.add("opacity-in");
+                    bd[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < bd.length; i++) {
+                    bd[i].children[1].classList.remove("opacity-in");
+                    bd[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        elec.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < elec.length; i++) {
+                    elec[i].children[1].classList.add("opacity-in");
+                    elec[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < elec.length; i++) {
+                    elec[i].children[1].classList.remove("opacity-in");
+                    elec[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        prog.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < prog.length; i++) {
+                    prog[i].children[1].classList.add("opacity-in");
+                    prog[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < prog.length; i++) {
+                    prog[i].children[1].classList.remove("opacity-in");
+                    prog[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        apt.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < apt.length; i++) {
+                    apt[i].children[1].classList.add("opacity-in");
+                    apt[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < apt.length; i++) {
+                    apt[i].children[1].classList.remove("opacity-in");
+                    apt[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+        so.forEach(clase => {
+            clase.addEventListener("mouseover", () => {
+                for (let i = 0; i < so.length; i++) {
+                    so[i].children[1].classList.add("opacity-in");
+                    so[i].children[1].classList.remove("opacity-out");
+                }
+            });
+            clase.addEventListener("mouseleave", () => {
+                for (let i = 0; i < so.length; i++) {
+                    so[i].children[1].classList.remove("opacity-in");
+                    so[i].children[1].classList.add("opacity-out");
+                }
+            })
+        })
+
+
+        const hora_1 = document.querySelector(".p.hora1");
+        const hora_2 = document.querySelector(".p.hora2");
+        const hora_3 = document.querySelector(".p.hora3");
+        const hora_4 = document.querySelector(".p.hora4");
+        const hora_5 = document.querySelector(".p.hora5");
+        const hora_6 = document.querySelector(".p.hora6");
+        const hora_7 = document.querySelector(".p.hora7");
+        const hora_8 = document.querySelector(".p.hora8");
+        const hora_9 = document.querySelector(".p.hora9");
+        const hora_10 = document.querySelector(".p.hora10");
+        const hora_11 = document.querySelector(".p.hora11");
+
+
+        setInterval(() => {
+            const date = new Date();
+            let hora = date.getHours();
+            let dia = date.getDay();
+
+            switch (hora) {
+                case 13: 
+                    hora_1.setAttribute("style", "background: red;");
+                    break;
+                case 14: 
+                    hora_1.setAttribute("style", "background: red;");
+                    break;
+                case 13: 
+                    hora_1.setAttribute("style", "background: red;");
+                    break;
+                case 13: 
+                    hora_1.setAttribute("style", "background: red;");
+                    break;
+                case 13: 
+                    hora_1.setAttribute("style", "background: red;");
+                    break;
+                case 13: 
+                    hora_1.setAttribute("style", "background: red;");
+                    break;
+                case 13: 
+                    hora_1.setAttribute("style", "background: red;");
+                    break;
+                case 13: 
+                    hora_1.setAttribute("style", "background: red;");
+                    break;
+            }
+
+        }, 1000);
+
+    </script>
+
+<!-- =============================================== -->
+<!-- =============================================== -->
+<!-- =============================================== -->
+
+    <script>
+        const menu = document.createElement("div");
+        const menuLeft = document.createElement("section");
+        const menuRight = document.createElement("section");
+        const subMenu = document.createElement("div");
+
+        const clases = document.querySelectorAll("article");
+
+        const claseSelected = document.createElement("article");
+        const paragraph = document.createElement("p");
+        const div = document.createElement("div");
+
+        const panel = document.createElement("div");
+
+        let selected = false;
+
+        //
+
+        clases.forEach((clase) => {
+            clase.addEventListener("click", () => {
+                selected = true;
+                funcClick(clase);
+            });
+            clase.addEventListener("mouseover", () => {
+                clase.setAttribute("style", "background: black");
+            })
+        });
+
+        function funcClick(clase) {
+            if (selected == true) {
+                menuLeft.classList.add("menuLeft");
+                menuRight.classList.add("menuRight");
+
+                menuLeft.append(claseSelected);
+                menuRight.append(subMenu);
+
+                claseSelected.classList.add("clase");
+                subMenu.classList.add("subMenu");
+
+                claseSelected.append(paragraph, div);
+                paragraph.classList.add("className");
+                paragraph.textContent = clase.children[0].textContent;
+
+                funcMenuRight(subMenu, clase);
+
+                menu.classList.add("menu");
+                menu.append(menuLeft, menuRight);
+
+                document.body.append(menu);
+            }
+        }
+
+        const materia = document.createElement("article");
+
+        const title = document.createElement("h1");
+        const main = document.createElement("section");
+        const asideLeft = document.createElement("aside");
+        const asideRight = document.createElement("aside");
+        const materiaName = document.createElement("p");
+        const materiaNameValue = document.createElement("p");
+        const materiaFullName = document.createElement("p");
+        const materiaFullNameValue = document.createElement("p");
+        const materiaTeacher = document.createElement("p");
+        const materiaTeacherValue = document.createElement("p");
+        const materiaCalendar = document.createElement("p");
+        const materiaCalendarDays = document.createElement("p");
+        const materiaCalendarValue = document.createElement("p");
+
+        materia.classList.add("materia");
+
+        title.classList.add("title");
+        main.classList.add("main");
+        asideLeft.classList.add("asideLeft");
+        asideRight.classList.add("asideRight");
+        materiaName.classList.add("materiaName");
+        materiaNameValue.classList.add("materiaNameValue");
+        materiaFullName.classList.add("materiaFullName");
+        materiaFullNameValue.classList.add("materiaFullNameValue");
+        materiaTeacher.classList.add("materiaTeacher");
+        materiaTeacherValue.classList.add("materiaTeacherValue");
+        materiaCalendar.classList.add("materiaCalendar");
+        materiaCalendarDays.classList.add("materiaCalendarDays");
+        materiaCalendarValue.classList.add("materiaCalendarValue");
+
+        title.textContent = "Información de la Materia";
+        materiaName.textContent = "Nombre: ";
+        materiaFullName.textContent = "Nombre Completo: ";
+        materiaTeacher.textContent = "Docente: ";
+        materiaCalendar.textContent = "Horas";
+
+        const opciones = document.createElement("article");
+
+        const title2 = document.createElement("h1");
+        const main2 = document.createElement("main");
+
+        opciones.classList.add("opciones");
+
+        title2.classList.add("title2");
+        main2.classList.add("main2");
+
+        title2.textContent = "Opciones";
+
+
+        // selected = true;
+        // funcClick(clases[2]); // Envía clase
+
+        function funcMenuRight(subMenu, clase) {
+            const idx = clase.getAttribute("idx") - 1;
+            const claseClass = clase.getAttribute("class");
+
+            // console.log(clase)
+            // console.log(clase.getAttribute("class"));
+
+            if (claseClass.includes("ingles")) {
+                materiaNameValue.textContent = "Inglés";
+                materiaFullNameValue.textContent = "Inglés";
+                materiaTeacherValue.textContent = "Almada Masse, Patricia Dan...";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Lunes: </span>
+            <span class="day">Viernes: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                13:00 a 13:45
+                <span>|</span>
+                13:45 a 14:30
+            </p>
+            <p>
+                13:45 a 14:30
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("diseño-web")) {
+                materiaNameValue.textContent = "Diseño Web";
+                materiaFullNameValue.textContent = "Diseño Web 1";
+                materiaTeacherValue.textContent = "Aquino Goro, Alexis Federi...";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Martes: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                13:00 a 13:45
+                <span>|</span>
+                13:45 a 14:30
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("lab-redes")) {
+                materiaNameValue.textContent = "LAB Redes";
+                materiaFullNameValue.textContent = "Laboratorio de Redes de Área Local";
+                materiaTeacherValue.textContent = "Bastarreix Blanco, Mariano";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Miércoles: </span>
+            <span class="day">Viernes: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                13:45 a 14:30
+                <span>|</span>
+                14:35 a 15:20
+            </p>
+            <p>
+                14:35 a 15:20
+                <span>|</span>
+                15:20 a 16:05
+            </p>
+        `;
+                // 
+
+            } else if (claseClass.includes("economia")) {
+                materiaNameValue.textContent = "Economía";
+                materiaFullNameValue.textContent = "Economía";
+                materiaTeacherValue.textContent = "Rethemias Maximo, Victor M...";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Miércoles: </span>
+            <span class="day">Jueves: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                15:20 a 16:05
+            </p>
+            <p>
+                13:00 a 13:45
+                <span>|</span>
+                13:45 a 14:30
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("matematicas")) {
+                materiaNameValue.textContent = "Matemáticas";
+                materiaFullNameValue.textContent = "Matemáticas";
+                materiaTeacherValue.textContent = "Neves Molinari, Carlos Jos...";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Lunes: </span>
+            <span class="day">Martes: </span>
+            <span class="day">Viernes: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                18:30 a 19:15
+            </p>
+            <p>
+                18:30 a 19:15
+            </p>
+            <p>
+                13:00 a 13:45
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("fisica")) {
+                materiaNameValue.textContent = "Física";
+                materiaFullNameValue.textContent = "Física";
+                materiaTeacherValue.textContent = "Menendez Mendez, Pedro Man...";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Lunes: </span>
+            <span class="day">Jueves: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                14:35 a 15:20
+                <span>|</span>
+                15:20 a 16:05
+            </p>
+            <p>
+                14:35 a 15:20
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("geometria")) {
+                materiaNameValue.textContent = "Geometría";
+                materiaFullNameValue.textContent = "Geometría";
+                materiaTeacherValue.textContent = "[Sin docente declarado]";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Martes: </span>
+            <span class="day">Viernes: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                14:35 a 15:20
+                <span>|</span>
+                15:20 a 16:05
+            </p>
+            <p>
+                17:45 a 18:30
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("bd")) {
+                materiaNameValue.textContent = "Bases de Datos";
+                materiaFullNameValue.textContent = "Bases de Datos";
+                materiaTeacherValue.textContent = "Comunale Martínez, Diego A...";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Jueves: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                15:20 a 16:05
+                <span>|</span>
+                16:10 a 16:55
+                <span>|</span>
+                16:55 a 17:40
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("electronica")) {
+                materiaNameValue.textContent = "Electrónica";
+                materiaFullNameValue.textContent = "Electrónica";
+                materiaTeacherValue.textContent = "Piriz Paredes, Juan Pablo";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Lunes: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                16:10 a 16:55
+                <span>|</span>
+                16:55 a 17:40
+                <span>|</span>
+                17:45 a 18:30
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("programacion")) {
+                materiaNameValue.textContent = "Programación";
+                materiaFullNameValue.textContent = "Programación 2";
+                // Andrés Sebastián Viré Cordobezº
+                // Viré Cordobez, Andrés Seba...
+                materiaTeacherValue.textContent = "Andrés Sebastián Viré Cordobez";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Martes: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                16:10 a 16:55
+                <span>|</span>
+                16:55 a 17:40
+                <span>|</span>
+                17:45 a 18:30
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("apt")) {
+                materiaNameValue.textContent = "APT";
+                materiaFullNameValue.textContent = "Análisis y Producción de Textos";
+                materiaTeacherValue.textContent = "Badano Chevalier, Liliana";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Miércoles: </span>
+            <span class="day">Viernes: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                16:10 a 16:55
+            </p>
+            <p>
+                16:10 a 16:55
+                <span>|</span>
+                16:55 a 17:40
+            </p>
+        `;
+                // 
+            } else if (claseClass.includes("so")) {
+                materiaNameValue.textContent = "Sistemas Op.";
+                materiaFullNameValue.textContent = "Sistemas Operativos";
+                materiaTeacherValue.textContent = "Cuozzi Queiros, Bruno";
+                materiaCalendarDays.innerHTML = `
+            <span class="day">Miércoles: </span>
+        `;
+                materiaCalendarValue.innerHTML = `
+            <p>
+                16:55 a 17:40
+                <span>|</span>
+                17:45 a 18:30
+                <span>|</span>
+                18:30 a 19:15
+            </p>
+        `;
+                // 
+            }
+
+            asideLeft.append(
+                materiaName,
+                materiaFullName,
+                materiaTeacher,
+                materiaCalendar,
+                materiaCalendarDays
+            );
+            asideRight.append(
+                materiaNameValue,
+                materiaFullNameValue,
+                materiaTeacherValue,
+                materiaCalendarValue
+            );
+            main.append(asideLeft, asideRight);
+            materia.append(title, main);
+
+            main2.append();
+
+            opciones.append(title2, main2);
+            subMenu.append(materia, opciones);
+        }
+
+        menuLeft.addEventListener("click", () => {
+            if (selected == true) {
+                selected = false;
+                document.body.removeChild(menu);
+            }
+        })
+    </script>
+
+    <style>
+        :root {
+            --dark: rgb(32 32 32);
+            --warm: rgb(245, 222, 179);
+        }
+
+        /* ::-webkit-scrollbar {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: red;
+} */
+
+        .menu {
+            background: rgb(0 0 0 / .3);
+            position: absolute;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            z-index: 3;
+            overflow: hidden;
+        }
+
+        .menuLeft,
+        .menuRight {
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+            max-width: 50%;
+            overflow: hidden;
+        }
+
+        .clase {
+            background: black;
+            height: 200px;
+            width: 400px;
+            border: 6px solid var(--dark);
+            border-radius: var(--br);
+        }
+
+        .clase>p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .selected {
+            position: absolute;
+        }
+
+        .className {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .subMenu {
+            box-sizing: border-box;
+            background: black;
+            display: flex;
+            height: 95%;
+            width: 95%;
+            border: 6px solid var(--dark);
+            border-radius: var(--br);
+            padding: 16px;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .materia,
+        .opciones {
+            box-sizing: border-box;
+            background: rgb(24 24 24);
+            height: 50%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            /* padding: 16px; */
+            border: none;
+            flex-direction: column;
+        }
+
+        .materia {
+            /* background: purple; */
+            display: flex;
+            min-height: 313.6px;
+        }
+
+        .materia>.title,
+        .opciones>.title2 {
+            /* background: red; */
+            color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 40px;
+            margin-top: 16px;
+            padding: 4px;
+        }
+
+        .materia>.title::before,
+        .opciones>.title2::before {
+            content: "";
+            background: white;
+            position: absolute;
+            height: 4px;
+            width: 80%;
+            transform: translate(0, 32px);
+            border-radius: 4px;
+        }
+
+        .materia>.materiaName {
+            color: white;
+            background: red;
+            height: 10px;
+            width: 40px;
+        }
+
+        .materia>.main {
+            box-sizing: border-box;
+            /* background: violet; */
+            position: absolute;
+            display: flex;
+            height: 80%;
+            width: 100%;
+            bottom: 0;
+            padding: 24px;
+            font-weight: 600;
+            align-content: center;
+            justify-content: space-between;
+        }
+
+        .asideLeft,
+        .asideRight {
+            /* background: orange; */
+            position: relative;
+            display: flex;
+            height: 100%;
+            width: fit-content;
+            flex-direction: column;
+            align-items: flex-start;
+            color: white;
+        }
+
+        .asideRight {
+            align-items: flex-end;
+            width: 70%;
+        }
+
+        .asideLeft .materiaCalendar {
+            /* background: chocolate; */
+            position: relative;
+            display: flex;
+            margin-top: 12px;
+            padding: 4px;
+        }
+
+        .asideLeft .materiaCalendar::before {
+            content: "";
+            position: absolute;
+            background: white;
+            height: 3px;
+            width: 80%;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 4px;
+        }
+
+        .materiaCalendarDays {
+            /* background: royalblue; */
+            display: flex;
+            flex-direction: column;
+            margin: 6px 0 0 24px;
+        }
+
+        .asideRight .materiaCalendarValue {
+            /* background: hotpink; */
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-top: 52px;
+        }
+
+        .materiaCalendarValue span {
+            margin-inline: 4px;
+        }
+
+        /*  */
+
+        .opciones {
+            /* background: rgb(255, 107, 181, .5); */
+            overflow-y: auto;
+        }
+    </style>
+
+    <style>
+        :root {
+            --dark: rgb(32 32 32);
+            --warm: rgb(245, 222, 179);
+            --br: 8px;
+        }
+
+        * {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -moz-user-select: none;
+            -moz-user-select: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h4 {
+            position: absolute;
+            top: 20px;
+            font-size: 1rem;
+            color: var(--warm);
+            background: rgb(0 0 0 / .5);
+            display: flex;
+            padding: 4px;
+            z-index: -1;
+            border-radius: 8px;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 800,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+
+
+        .contenedor {
+            /* box-sizing: border-box; */
+            background: black;
+            display: grid;
+            height: 550px;
+            width: 1200px;
+            grid-template-rows: repeat(12, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            border: 4px solid var(--dark);
+            border-radius: 1rem;
+            padding: 1rem;
+            column-gap: 8px;
+            row-gap: 4px;
+        }
+
+        .p,
+        main p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--warm);
+            height: 85%;
+            font-size: 1.5rem;
+            /* text-align: center; */
+            font-weight: 600;
+            border: 2px solid var(--dark);
+            border-radius: var(--br);
+            /* margin: 8px 4px; */
+            overflow: hidden;
+            position: relative;
+        }
+
+        article {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--dark);
+            border-radius: var(--br);
+            overflow: hidden;
+        }
+
+        article>p {
+            position: absolute;
+            border: none;
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+        }
+
+        article>div {
+            border: none;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .opacity-in {
+            animation: op-in .3s ease forwards;
+        }
+
+        @keyframes op-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .opacity-out {
+            animation: op-out .3s ease both;
+        }
+
+        @keyframes op-out {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        /*  */
+
+        .hora {
+            grid-column: 1 / 1;
+            grid-row: auto;
+            /* margin: 2px 4px; */
+        }
+
+        .hora.recreo {
+            grid-column: 1 / span 6;
+        }
+
+        .doble {
+            height: 95%;
+        }
+
+        .opacity {
+            opacity: 1;
+        }
+
+        /*  */
+
+        /* #region */
+
+        .clase-1.ingles {
+            grid-area: 2 / 2 / span 2 / 2;
+        }
+
+        .clase-1.diseño-web {
+            grid-area: 2 / 3 / 4 / 3;
+        }
+
+        .clase-1.lab-redes {
+            grid-area: 3 / 4;
+        }
+
+        .clase-1.economia {
+            grid-area: 2 / 5 / 4 / 6;
+        }
+
+        .clase-1.matematicas {
+            grid-area: 2 / -2;
+        }
+
+        .clase-1.ingles-2 {
+            grid-area: 3 / 6;
+            /* background: red; */
+        }
+
+        .clase-2.fisica {
+            grid-area: 5 / 2 / 7 / 2;
+        }
+
+        .clase-2.geometria {
+            grid-area: 5 / 3 / 7 / 3;
+        }
+
+        .clase-2.lab-redes {
+            grid-area: 5 / 4 / 6 / 4;
+        }
+
+        .clase-2.economia {
+            grid-area: 6 / 4 / 7 / 4;
+        }
+
+        .clase-2.fisica-2 {
+            grid-area: 5 / 5;
+        }
+
+        .clase-2.bd {
+            grid-area: 6 / 5;
+        }
+
+        .clase-2.lab-redes-2 {
+            grid-area: 5 / 6 / 7;
+        }
+
+        .clase-3.electronica {
+            grid-area: 8 / 2 / 10;
+        }
+
+        .clase-3.programacion {
+            grid-area: 8 / 3 / 10;
+        }
+
+        .clase-3.apt {
+            grid-area: 8 / 4;
+        }
+
+        .clase-3.so {
+            grid-area: 9 / 4;
+        }
+
+        .clase-3.bd {
+            grid-area: 8 / 5 / 10;
+        }
+
+        .clase-3.apt-2 {
+            grid-area: 8 / 6 / 10;
+        }
+
+        .clase-4.electronica {
+            grid-area: 11 / 2;
+        }
+
+        .clase-4.matematicas {
+            grid-area: 12 / 2 / 12 / 4;
+        }
+
+        .clase-4.programacion {
+            grid-area: 11 / 3;
+        }
+
+        .clase-4.so {
+            grid-area: 11 / 4 / 13 / 4;
+        }
+
+        .clase-4.geometria {
+            grid-area: 11 / 6
+        }
+
+        /* #endregion */
+
+        /*  */
+
+        .ingles>div {
+            background: brown;
+        }
+
+        .diseño-web>div {
+            background: blueviolet;
+        }
+
+        .lab-redes>div {
+            background: coral;
+        }
+
+        .economia>div {
+            background: crimson;
+        }
+
+        .matematicas>div {
+            background: rgb(13, 114, 13);
+        }
+
+        .fisica>div {
+            background: rgb(190, 7, 7);
+        }
+
+        .geometria>div {
+            background: rgb(221, 146, 7);
+        }
+
+        .bd>div {
+            background: purple;
+        }
+
+        .electronica>div {
+            background: rgb(35, 91, 99);
+        }
+
+        .programacion>div {
+            background: rgb(219, 90, 155);
+        }
+
+        .apt>div {
+            background: royalblue;
+        }
+
+        .so>div {
+            background: indianred
+        }
+    </style>
+</body>
+
+</html>
