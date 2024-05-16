@@ -46,6 +46,10 @@
             <p>Diseño Web</p>
             <div></div>
         </article>
+        <article idx="5" class="clase-1 matematicas">
+            <p>Matemáticas</p>
+            <div></div>
+        </article>
         <article idx="3" class="clase-1 lab-redes">
             <p>LAB Redes</p>
             <div></div>
@@ -54,7 +58,7 @@
             <p>Economía</p>
             <div></div>
         </article>
-        <article idx="5" class="clase-1 matematicas">
+        <article idx="5" class="clase-1 matematicas matematicas-2">
             <p>Matemáticas</p>
             <div></div>
         </article>
@@ -504,7 +508,7 @@
             if (claseClass.includes("ingles")) {
                 materiaNameValue.textContent = "Inglés";
                 materiaFullNameValue.textContent = "Inglés";
-                materiaTeacherValue.textContent = "Almada Masse, Patricia Dan...";
+                materiaTeacherValue.textContent = "Patricia Dan te? Almada Masse"; // Almada Masse, Patricia Dan...
                 materiaCalendarDays.innerHTML = `
             <span class="day">Lunes: </span>
             <span class="day">Viernes: </span>
@@ -1127,6 +1131,10 @@
             grid-area: 2 / 3 / 4 / 3;
         }
 
+        .clase-1.matematicas {
+            grid-area: 2 / 4;
+        }
+
         .clase-1.lab-redes {
             grid-area: 3 / 4;
         }
@@ -1135,7 +1143,7 @@
             grid-area: 2 / 5 / 4 / 6;
         }
 
-        .clase-1.matematicas {
+        .clase-1.matematicas-2 {
             grid-area: 2 / -2;
         }
 
@@ -1201,7 +1209,7 @@
         }
 
         .clase-4.matematicas {
-            grid-area: 12 / 2 / 12 / 4;
+            grid-area: 12 / 3;
         }
 
         .clase-4.programacion {

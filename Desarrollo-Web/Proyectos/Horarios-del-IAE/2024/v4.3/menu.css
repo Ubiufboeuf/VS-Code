@@ -21,7 +21,7 @@ background: red;
     align-items: center;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    z-index: 3;
+    z-index: 5;
     overflow: hidden;
 }
 
