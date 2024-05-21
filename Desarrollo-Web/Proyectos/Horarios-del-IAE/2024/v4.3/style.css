@@ -70,11 +70,9 @@ h4-info {
     margin: 0px 64px 8px 0px;
 }
 
-#reloj, #materia-actual, #hora-actual {
+#reloj, #materia-actual, #hora-actual, #dia-actual {
     background: var(--darkop);
-    position: absolute;
     display: flex;
-    right: 0;
     justify-content: center;
     align-items: center;
     height: 55px;
@@ -126,6 +124,7 @@ h4-info {
 
 #dia-actual {
     color: var(--warm);
+
 }
 
 /* --------------------------- */
