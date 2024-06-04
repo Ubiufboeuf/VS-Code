@@ -141,6 +141,26 @@ Prueba añadiendo CSS
 **Ubicación en Crea:** No existe
 
 
+<br>
+
+estilo Comportamiento Y Texto
+
+-
+
+**Fecha de creación de archivos:** 21 de Mayo de 2024 <br>
+**Fecha de comienzo de actividad:** 21 de Mayo de 2024 <br>
+**Fecha de finalización de actividad:** 21 de Mayo de 2024 <br>
+
+#### \- _Información de Crea_ \-
+**Tarea en Crea:** estilo Comportamiento Y Texto <br>
+**Nota / Calificación:** N/A - No Disponible<br>
+**Entregas:** [1 elemento | Puntual](https://ceibal.schoology.com/assignment/7307241038/info) <br>
+**Publicado:** Martes 21 de Mayo de 2024 a las 12:28 <br>
+**Vence:** Martes 21 de Mayo de 2024 a las 23:59<br>
+**Momento de entrega:** 21 de Mayo de 2024 a las 14:38 <br>
+**Ubicación en Crea:** CSS
+
+
 
 ----
 Snippet para añadir una actividad: [snippet] <br>

@@ -15,50 +15,51 @@ const listaElementos = [
   "2",
   "3",
   "4",
-  "el"
+  "el",
+  "te",
+  "atendido",
+  "atendiendo",
 ];
 
 const input = document.querySelector("input");
-const div = document.querySelector("div");
+const lista = document.querySelector("div");
 
-function search(input, data, key) {
-  console.clear();
-  // console.log(input.value);
-  // const iv = input.value;
-  // ol.innerHTML = "";
-  // lista.map((elemento) => {
-  //   if (elemento.includes(iv)) {
-  //     console.log(elemento);
-  //     const li = document.createElement("li");
-  //     li.textContent = elemento;
-  //     ol.append(li);
-  //   } else {
-  //     console.log("No");
-  //     ol.forEach(element => {
-  //       console.log(element)
-  //     });
-  //   }
-  // })
+input.focus();
+
+input.addEventListener("keydown", (event) => {
   const iv = input.value;
-  
-  if (key == "Enter") {
-    div.textContent = "";
-    listaElementos.map((elemento) => {
-      if (elemento.includes(iv)) {
-        console.log(elemento);
-        const p = document.createElement("p");
-        p.setAttribute("style", "margin: 0;")
-        p.textContent = div.childElementCount + ". " + elemento;
-        div.append(p);
-      }
-    }) 
-  }
-  console.log(div)
-  console.log(div.children[3])
-  div.children[3].setAttribute("style", "order: 0")
-  console.log(div.children[3])
-}
 
-document.addEventListener("keydown", (e) => {
-  search(input, e, e.key)
+  if (iv === "") {
+    lista.textContent = "";
+  }
+})
+
+input.addEventListener("keyup", (event) => {
+  const iv = input.value;
+  lista.textContent = "";
+
+  listaElementos.map((element) => {
+    const p = document.createElement("p");
+    if (element === iv) {
+      p.textContent = element;
+      p.classList.add("ord-1");
+      lista.append(p);
+    } else if (element.startsWith(iv)) {
+      p.textContent = element;
+      p.classList.add("ord-2");
+      lista.append(p);
+    } else if (element.endsWith(iv)) {
+      p.textContent = element;
+      p.classList.add("ord-3");
+      lista.append(p);
+    } else if (element.includes(iv)) {
+      p.textContent = element;
+      p.classList.add("last");
+      lista.append(p);
+    } 
+  })
+
+  if (iv === "") {
+    lista.textContent = "";
+  }
 })

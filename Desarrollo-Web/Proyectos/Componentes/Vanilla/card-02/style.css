@@ -10,6 +10,7 @@ body {
     display: flex;
     align-items: flex-end;
     user-select: none;
+    background: #0f0f0f;
 }
 
 ::-webkit-scrollbar {
