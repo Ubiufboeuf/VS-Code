@@ -357,6 +357,8 @@
             let hora = date.getHours();
             let dia = date.getDay();
 
+            hora = 0;
+
             switch (hora) {
                 case 13: 
                     hora_1.setAttribute("style", "background: red;");
@@ -1057,6 +1059,7 @@
             border: 2px solid var(--dark);
             border-radius: var(--br);
             overflow: hidden;
+            cursor: pointer;
         }
 
         article>p {
