@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Documento</title>
+    </head>
+    <body>
+        
+        <p></p>
+
+    <script>
+        
+        const p = document.querySelector("p");
+
+        fetch("file.json")
+            .then(response => response.json())
+            .then(data => {
+                const p = document.querySelector("p");
+                
+                console.log(data[0]);
+
+                p.textContent = data;
+                
+            })
+
+    </script>
+    </body>
+</html>

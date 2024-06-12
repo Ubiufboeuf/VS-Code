@@ -1,0 +1,302 @@
+:root {
+    --dark: rgb(32 32 32);
+    --warm: rgb(245, 222, 179);
+    --br: 8px;
+}
+
+* {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    position: absolute;
+    top: 20px;
+    font-size: 1rem;
+    color: var(--warm);
+    background: rgb(0 0 0 / .5);
+    display: flex;
+    padding: 4px;
+    z-index: -1;
+    border-radius: 8px;
+    align-items: center;
+    gap: 6px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 800,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+
+.contenedor {
+    /* box-sizing: border-box; */
+    background: black;
+    display: grid;
+    height: 550px;
+    width: 1200px;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    border: 4px solid var(--dark);
+    border-radius: 1rem;
+    padding: 1rem;
+    column-gap: 8px;
+    row-gap: 4px;
+}
+
+.p,
+main p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--warm);
+    height: 85%;
+    font-size: 1.5rem;
+    /* text-align: center; */
+    font-weight: 600;
+    border: 2px solid var(--dark);
+    border-radius: var(--br);
+    /* margin: 8px 4px; */
+    overflow: hidden;
+    position: relative;
+}
+
+article {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--dark);
+    border-radius: var(--br);
+    overflow: hidden;
+}
+
+article>p {
+    position: absolute;
+    border: none;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+article>div {
+    border: none;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.opacity-in {
+    animation: op-in .3s ease forwards;
+}
+
+@keyframes op-in {
+    to {
+        opacity: 1;
+    }
+}
+
+.opacity-out {
+    animation: op-out .3s ease both;
+}
+
+@keyframes op-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/*  */
+
+.hora {
+    grid-column: 1 / 1;
+    grid-row: auto;
+    /* margin: 2px 4px; */
+}
+
+.hora.recreo {
+    grid-column: 1 / span 6;
+}
+
+.doble {
+    height: 95%;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+/*  */
+
+/* #region */
+
+.clase-1.ingles {
+    grid-area: 2 / 2 / span 2 / 2;
+}
+
+.clase-1.diseño-web {
+    grid-area: 2 / 3 / 4 / 3;
+}
+
+.clase-1.lab-redes {
+    grid-area: 3 / 4;
+}
+
+.clase-1.economia {
+    grid-area: 2 / 5 / 4 / 6;
+}
+
+.clase-1.matematicas {
+    grid-area: 2 / -2;
+}
+
+.clase-1.ingles-2 {
+    grid-area: 3 / 6;
+    /* background: red; */
+}
+
+.clase-2.fisica {
+    grid-area: 5 / 2 / 7 / 2;
+}
+
+.clase-2.geometria {
+    grid-area: 5 / 3 / 7 / 3;
+}
+
+.clase-2.lab-redes {
+    grid-area: 5 / 4 / 6 / 4;
+}
+
+.clase-2.economia {
+    grid-area: 6 / 4 / 7 / 4;
+}
+
+.clase-2.fisica-2 {
+    grid-area: 5 / 5;
+}
+
+.clase-2.bd {
+    grid-area: 6 / 5;
+}
+
+.clase-2.lab-redes-2 {
+    grid-area: 5 / 6 / 7;
+}
+
+.clase-3.electronica {
+    grid-area: 8 / 2 / 10;
+}
+
+.clase-3.programacion {
+    grid-area: 8 / 3 / 10;
+}
+
+.clase-3.apt {
+    grid-area: 8 / 4;
+}
+
+.clase-3.so {
+    grid-area: 9 / 4;
+}
+
+.clase-3.bd {
+    grid-area: 8 / 5 / 10;
+}
+
+.clase-3.apt-2 {
+    grid-area: 8 / 6 / 10;
+}
+
+.clase-4.electronica {
+    grid-area: 11 / 2;
+}
+
+.clase-4.matematicas {
+    grid-area: 12 / 2 / 12 / 4;
+}
+
+.clase-4.programacion {
+    grid-area: 11 / 3;
+}
+
+.clase-4.so {
+    grid-area: 11 / 4 / 13 / 4;
+}
+
+.clase-4.geometria {
+    grid-area: 11 / 6
+}
+
+/* #endregion */
+
+/*  */
+
+.ingles>div {
+    background: brown;
+}
+
+.diseño-web>div {
+    background: blueviolet;
+}
+
+.lab-redes>div {
+    background: coral;
+}
+
+.economia>div {
+    background: crimson;
+}
+
+.matematicas>div {
+    background: rgb(13, 114, 13);
+}
+
+.fisica>div {
+    background: rgb(190, 7, 7);
+}
+
+.geometria>div {
+    background: rgb(221, 146, 7);
+}
+
+.bd>div {
+    background: purple;
+}
+
+.electronica>div {
+    background: rgb(35, 91, 99);
+}
+
+.programacion>div {
+    background: rgb(219, 90, 155);
+}
+
+.apt>div {
+    background: royalblue;
+}
+
+.so>div {
+    background: indianred
+}
