@@ -1,0 +1,34 @@
+{
+    "name": "jquery-loading-dots",
+    "title": "Loading Dots",
+    "main": "./dot.js",
+    "description": "jQuery plugin to show a set of three loading dots for ajax request",
+    "keywords": [
+        "loading",
+        "loader",
+        "dots"
+    ],
+    "version": "0.2.0",
+    "author": {
+        "name": "miduga",
+        "email": "miduga@gmail.com",
+        "url": "http://midu.dev"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/miduga/loadingDots/blob/master/MIT-LICENSE.txt"
+        }
+    ],
+    "peerDependencies": {
+        "jquery": ">=1.5"
+    },
+    "devDependencies": {
+        "standard": "^16.0.4"
+    },
+    "eslintConfig": {
+        "extends": [
+            "./node_modules/standard/eslintrc.json"
+        ]
+    }
+}

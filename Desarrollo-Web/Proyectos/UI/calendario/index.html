@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel='stylesheet' href='style.css'>
+    <title>Calendario</title>
+  </head>
+  <body>
+    <section id="top-cal">
+      <div id="info-del-dia">
+        <p>Jueves, 20 de Junio de 2024</p>
+        <p>14:07</p>
+      </div>
+      
+      <div id="configuracion">
+        <select id="select-mes">
+          <option>Enero</option>
+          <option>Febrero</option>
+          <option>Marzo</option>
+          <option>Abril</option>
+          <option>Mayo</option>
+          <option>Junio</option>
+          <option>Julio</option>
+          <option>Agosto</option>
+          <option>Septiembre</option>
+          <option>Octubre</option>
+          <option>Noviembre</option>
+          <option>Diciembre</option>
+        </select>
+        <select id="select-nombre-dia">
+          <option>Nombres largos</option>
+          <option>Nombres cortos (3)</option>
+          <option>Nombres cortos (2)</option>
+        </select>
+      </div>
+    </section>
+
+    <button id="config" class="material-symbols-outlined">settings</button>
+
+    <main>
+      <section id="semana"></section>
+      <section id="dias"></section>
+    </main>
+
+    <script type="module" src='scripts.js'></script>
+  </body>
+</html>

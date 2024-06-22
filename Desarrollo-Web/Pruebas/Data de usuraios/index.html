@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Documento</title>
+  </head>
+  <body>
+    <input type="button" id="cargar3" value="Cargar carpeta">
+    <div id="directorio"></div>
+
+    <input type="file" id="file-selector" onClick="async (e) => e.preventDefault(); const r = await window.showDirectoryPicker(); e.target.value = r">
+<script>
+  // const fileSelector = document.getElementById('file-selector');
+  // fileSelector.addEventListener('change', (event) => {
+  //   const fileList = event.target.files;
+  //   console.log(fileList);
+  // });
+</script>
+    <script src='scripts.js'></script>
+  </body>
+</html>

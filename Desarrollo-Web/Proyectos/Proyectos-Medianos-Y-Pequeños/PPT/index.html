@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='style.css'>
+    <title>Piedra Papel Tijeras</title>
+  </head>
+  <body>
+    <h1 id="title">Piedra Papel Tijeras</h1>
+    <section>
+      <article id="resultados">
+        <p id="valor-jugador">[Valor Jugador]</p>
+        <p id="valor-cpu">[Valor CPU]</p>
+        <p id="resultado">[Resultado]</p>
+      </article>
+      <article id="game">
+        <button id="piedra" value="Piedra">
+          <img src="assets/Piedra.png" alt="Piedra" />
+        </button>
+        <button id="papel" value="Papel">
+          <img src="assets/Papel.png" alt="Papel" />
+        </button>
+        <button id="tijeras" value="Tijeras">
+          <img src="assets/Tijera.png" alt="Tijeras" />
+        </button>
+      </article>
+
+      <ul id="detalles">
+        <div>
+          <li id="partidas-jugadas">[Partidas]</li>
+          <li id="victorias">[Victorias]</li>
+          <li id="empates">[Empates]</li>
+          <li id="derrotas">[Derrotas]</li>
+        </div>
+        <grid-table>
+          <div>
+            <h2 id="r-actual">Racha actual</h2>
+            <p id="racha-victorias"></p>
+            <p id="racha-empates"></p>
+            <p id="racha-derrotas"></p>
+          </div>
+          <div>
+            <h2 id="max-r">Mayor racha</h2>
+            <p id="max-victorias"></p>
+            <p id="max-empates"></p>
+            <p id="max-derrotas"></p>
+          </div>
+        </grid-table>
+      </ul>
+
+      <section-list id="lista-resultados"></section-list>
+    </section>
+
+    <script src='scripts.js'></script>
+  </body>
+</html>

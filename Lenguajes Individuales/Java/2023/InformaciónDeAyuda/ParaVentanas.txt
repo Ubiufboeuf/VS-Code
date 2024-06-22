@@ -1,0 +1,5 @@
+// Crear una ventana
+    JFrame ventana = new JFrame("Nueva ventana");
+
+// Establecer el tamaño de la ventana
+    ventana.setSize(300, 300);

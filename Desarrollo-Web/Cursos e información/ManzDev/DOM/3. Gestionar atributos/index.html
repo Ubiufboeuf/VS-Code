@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name='viewport' content'width=device-width, initial-scale=1.0'>
+        <title>Gestionar atributos del DOM</title>
+    </head>
+    <body style="background: black; color: white">
+        <div id="page" class="info data dark" data-number="5"></div>
+        <button></button>
+
+        <script>
+            // Obtener atributos HTML
+            /* 
+                hasAttributes() - bool
+                hasAttribute(attr) - bool
+                getAttributeNames() - array
+                getAttribute(aatr) - string
+            */
+
+            const elemento = document.querySelector("#page");
+
+            console.log(elemento.hasAttributes());
+            console.log(elemento.hasAttribute("data-number"));
+            console.log(elemento.hasAttribute("disabled"));
+
+            console.log(elemento.getAttributeNames());
+            console.log(elemento.getAttribute("id"));
+
+            // 
+            // Modificar o eliminar atributos HTML
+            /* 
+                setAttribute(attr, value)
+                toggleAttribute(attr, force)
+                removeAttribute(attr)
+            */
+
+            elemento.setAttribute("data-number", "10");
+            elemento.removeAttribute("id");
+            elemento.setAttribute("id", "page");
+
+            console.log(elemento.getAttributeNames());
+            console.log(elemento.getAttribute("id"));
+            console.log(elemento.getAttribute("class"));
+            console.log(elemento.getAttribute("data-number"));
+
+            // 
+            // Caso especial: Atributos booleanos
+            const button = document.querySelector("button");
+
+            // button.setAttribute("disabled", true); // ❌
+            button.disabled = true; // ✅
+            button.setAttribute("disabled", ""); // ✅
+
+            /*
+               El primer método devuelve esto:
+                    <button disabled="true">
+               en vez de esto:
+                    <button disabled>
+            */
+
+            button.toggleAttribute("disabled");
+            button.toggleAttribute("hidden");
+
+            /* 
+                Si se le proporciona el boolean force,
+                si es verdadero: añade el atributo,
+                si es falso: elimina el atributo.
+            */
+
+        </script>
+    </body>
+</html>

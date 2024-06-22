@@ -1,0 +1,199 @@
+@font-face {
+  font-family: Poppins;
+  src: url("assets/Poppins-Regular.ttf");
+}
+
+body {
+  background: #1e1e1e;
+  color: #e4e4e4e4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Poppins, system-ui, sans-serif;
+  color-scheme: dark light;
+}
+
+section {
+  /* background: brown; */
+  position: relative;
+  display: grid;
+  place-items: center;
+  grid-template-columns: minmax(360px, 4fr) minmax(360px, 3fr);
+  grid-template-rows: minmax(120px, 1fr) 2fr;
+  width: 90%;
+  height: 80vh;
+  min-height: fit-content;
+  border: 2px solid;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#resultados {
+  /* background: green; */
+  display: grid;
+  grid-area: 1 / 1;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; 
+  width: 100%;
+  height: 100%;
+}
+
+#resultados > p {
+  /* background: green; */
+  height: 83.33px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#resultados > #resultado {
+  grid-column: 1 / span 2;
+}
+
+#game {
+  /* background: rgb(255 255 255 / .2); */
+  border-radius: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  height: 240px;
+  width: 540px;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-area: 2 / 1;
+}
+
+#game > button {
+  background: transparent;
+  border: 0;
+  height: 120px;
+  width: 120px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game > button > img {
+  height: 80%;
+}
+
+#detalles {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  padding: 20px 0;
+  grid-row: 1;
+  grid-column: 2;
+  
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#detalles > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#detalles > grid-table {
+  background: orange;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#detalles > grid-table > div:first-of-type {
+  background: green;
+  grid-column: 1;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#detalles > grid-table > div:last-of-type {
+  background: chocolate;
+  grid-column: 2;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#detalles > grid-table > div * {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  grid-column: 1 / -1;
+}
+
+#lista-resultados {
+  overflow: auto;
+  scrollbar-gutter: stable;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#lista-resultados > article {
+  background: rgb(0 0 0 / .4);
+  display: flex;
+  justify-content: space-between;
+  min-height: 80px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#lista-resultados > article * {
+  margin: 0;
+}
+
+#lista-resultados > article > #res {
+  /* background-color: blue; */
+  width: 140px;
+  display: grid;
+  place-items: center;
+  border-right: 2px solid rgb(255 255 255 / .3);
+}
+
+#lista-resultados > article > #momento {
+  /* background: red; */
+  width: 100%;
+  height: 100%;
+  margin: 4px 12px;
+}
+
+#lista-resultados > article > #conteo {
+  position: absolute;
+  width: 80px;
+  height: 28px;
+  margin: 4px 12px;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  border-top-color: rgb(255 255 255 / .3);
+  border-left-color: rgb(255 255 255 / .3);
+  display: flex;
+  align-items: center;
+  padding-inline: 4px;
+}

@@ -1,0 +1,73 @@
+@font-face {
+  font-family: face;
+  src: url("Poppins-Regular.ttf");
+}
+
+:root {
+  --color: #346;
+  --color2: #fff5;
+}
+
+body {
+  background: #1e1e1e;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Poppins, system-ui;
+}
+
+#lista {
+  background: rgba(255, 255, 255, 0.2);
+  height: 320px;
+  width: 480px;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#lista > article {
+  background: var(--color);
+  height: 60px;
+  width: 380px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: grab;
+}
+
+#lista > article:hover {
+  /* border: 2px solid var(--color2); */
+}
+
+.drag {
+  border: 2px solid var(--color2);
+}
+.end {
+  border: 2px dotted var(--color);
+}
+.enter {
+  border: 2px dotted var(--color2);
+}
+.leave {
+  border: 2px dotted var(--color);
+}
+.over {
+  border: 2px dotted var(--color2);
+}
+.start {
+  border: 2px dotted var(--color2);
+}

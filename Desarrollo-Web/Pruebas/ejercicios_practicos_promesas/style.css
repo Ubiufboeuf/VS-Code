@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Poppins;
+  src: url("Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: CascadiaCode;
+  src: url("CascadiaCode.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Poppins, system-ui;
+}
+
+pre {
+  font-family: CascadiaCode, system-ui;
+  font-weight: 400;
+  font-variant-ligatures: normal;
+}
