@@ -1,7 +1,0 @@
-\u2022	Círculo grueso
-\u2023  Círculo grueso sin relleno
-\u25E6	Cuadrado negro
-\u25AA	Triángulo hacia arriba
-\u25BA	Triángulo hacia abajo
-\u25C4	Triángulo hacia la izquierda
-\u25C6	Triángulo hacia la derecha

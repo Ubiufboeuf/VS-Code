@@ -1,2 +1,0 @@
-Dataso, con Ctrl y la tecla para cerrar llaves, la contra coma o coma invertida y
-el cierre de ¿corchetes? se puede convertir una linea en un mensaje, al menos en java

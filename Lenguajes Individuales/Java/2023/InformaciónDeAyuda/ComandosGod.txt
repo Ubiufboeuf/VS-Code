@@ -1,3 +1,0 @@
-Método para limpiar la terminal:
-    new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-
