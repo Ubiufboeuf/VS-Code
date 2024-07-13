@@ -3,6 +3,10 @@
   src: url("assets/Poppins-Regular.ttf");
 }
 
+:root {
+  --bg1: rgb(0 0 0 / .4);
+}
+
 body {
   background: #1e1e1e;
   color: #e4e4e4e4;
@@ -19,6 +23,28 @@ body {
   box-sizing: border-box;
   font-family: Poppins, system-ui, sans-serif;
   color-scheme: dark light;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 600px;
+  /* background: red; */
+}
+
+header #erase {
+  border: 2px solid;
+  height: 40px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+
+header #erase:hover {
+  color: red;
 }
 
 section {
@@ -85,58 +111,45 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: 3px solid rgba(0, 40, 200, 0.534);
+
+  &:hover > img {
+    scale: 1.1;
+  }
 }
 
 #game > button > img {
   height: 80%;
+  transition: scale .2s ease;
 }
 
 #detalles {
-  position: relative;
-  display: grid;
-  grid-template-columns: 3fr 4fr;
-  padding: 20px 0;
   grid-row: 1;
   grid-column: 2;
+  
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: column;
   
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /* border-style: dashed; */
+  border: 0;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0 0 0 16px;
+
+  background-color: var(--bg1);
 }
 
-#detalles > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-#detalles > grid-table {
-  background: orange;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-#detalles > grid-table > div:first-of-type {
-  background: green;
-  grid-column: 1;
-  grid-template-rows: repeat(4, 1fr);
-}
-
-#detalles > grid-table > div:last-of-type {
-  background: chocolate;
-  grid-column: 2;
-  grid-template-rows: repeat(4, 1fr);
-}
-
-#detalles > grid-table > div * {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0;
+#detalles * {
   font-size: 14px;
-  grid-column: 1 / -1;
+  margin: 0;
+}
+
+#detalles > h2 {
+  font-size: 16px;
 }
 
 #lista-resultados {
@@ -149,16 +162,17 @@ section {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-top: 16px;
 }
 
 #lista-resultados > article {
-  background: rgb(0 0 0 / .4);
+  background: var(--bg1);
   display: flex;
   justify-content: space-between;
   min-height: 80px;
   width: 100%;
   border-radius: 20px;
-  padding: 8px 0;
+  padding: 8px ;
   overflow: hidden;
   position: relative;
 }
@@ -167,13 +181,38 @@ section {
   margin: 0;
 }
 
-#lista-resultados > article > #res {
-  /* background-color: blue; */
-  width: 140px;
-  display: grid;
-  place-items: center;
+#lista-resultados > article > div {
+  /* background-color: rgb(255 255 255 / .1); */
+  width: 120px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-right: 2px solid rgb(255 255 255 / .3);
 }
+
+#lista-resultados > article > div > #res {
+  /* color: orange; */
+}
+
+#lista-resultados > article > div > #conteo {
+
+}
+
+/* #lista-resultados > article > div > #conteo {
+  width: 80px;
+  height: 28px;
+  margin: 4px 12px;
+  left: 0;
+  bottom: 0;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  border-top-color: rgb(255 255 255 / .3);
+  display: flex;
+  align-items: center;
+  padding-inline: 4px;
+} */
 
 #lista-resultados > article > #momento {
   /* background: red; */
@@ -182,18 +221,6 @@ section {
   margin: 4px 12px;
 }
 
-#lista-resultados > article > #conteo {
-  position: absolute;
-  width: 80px;
-  height: 28px;
-  margin: 4px 12px;
-  right: 0;
-  bottom: 0;
-  border-radius: 4px;
-  border: 2px solid transparent;
-  border-top-color: rgb(255 255 255 / .3);
-  border-left-color: rgb(255 255 255 / .3);
-  display: flex;
-  align-items: center;
-  padding-inline: 4px;
+@media (width <= 1150px) {
+
 }
