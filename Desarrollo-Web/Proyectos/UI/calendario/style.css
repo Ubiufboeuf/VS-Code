@@ -10,8 +10,8 @@
   --color: white;
   --color2: #e4e4e4;
   --color3: #777;
-  --today: rgba(10, 86, 90, 0.4);
-  --today-b: rgb(9, 124, 93);
+  --today: rgba(10, 86, 90, 0.7);
+  --today-b: rgb(14, 134, 100);
   --hover: rgb(10 86 90 / .1);
   --hover-b: rgb(9 124 93 / .3);
 
@@ -166,13 +166,14 @@ main > #dias > p:not(.vacio) {
   cursor: pointer;
   font-size: 18px;
   
-    &:hover:not(.hoy) {
+    &:hover:not(.hoy, .selected) {
     background: var(--hover);
     border: 1px solid var(--hover-b);
   }
 }
 
-.hoy {
+.hoy,
+.hoy.selected {
   background: var(--today);
   border: 1px solid var(--today-b);
 }
@@ -181,3 +182,9 @@ main > #dias > p:not(.vacio) {
   background: var(--today-b);
   border: 4px solid var(--today-b);
 }
+
+.selected {
+  background: rgba(10, 86, 90, 0.4);
+  border: 1px solid rgb(9, 124, 93, .7);
+}
+

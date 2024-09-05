@@ -62,7 +62,7 @@ select_largo_dias.addEventListener("change", () => {
   largoDias(select_largo_dias);
 })
 
-function manageListas (nuevo_mes) {
+function manageListas(nuevo_mes) {
   lista_dias.map(el => {
     // console.log(el)
     if (el.nombre === nuevo_mes) {
@@ -81,4 +81,15 @@ manageListas(select_mes.value)
 select_mes.addEventListener("change", (e) => {
   const nuevo_mes = e.target.value;
   manageListas(nuevo_mes)
+})
+
+const dias = document.querySelectorAll(".dia")
+dias.forEach((dia, idx) => {
+  dia.addEventListener("click", () => {
+    console.log(dia.textContent)
+    dias.forEach((dia) => {
+      dia.classList.remove("selected")
+    })
+    dia.classList.add("selected")
+  })
 })
